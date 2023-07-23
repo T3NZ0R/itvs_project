@@ -35,7 +35,7 @@ const Footer = () => {
                     <a className={styles.footerLink} href="#">
                         <div className={styles.footerLinkTitle}>Дизайн сайту:
                             <div className={styles.footerLinkInfo}>
-                                <img src={"icons/instagram.svg"} alt="instagram"/> @yurii_olekiv
+                                <img src={"icons/instagram.svg"} alt="instagram"/> @yurii_oleskiv
                             </div></div>
                     </a>
                     <a className={styles.footerLink} target={"_blank"} href="https://linktr.ee/t3nz0r">
