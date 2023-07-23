@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ContactUs = () => {
+const Header = () => {
     return (
         <>
-            ContactUs
+            Header
         </>
     );
 };
 
-export default ContactUs;
+export default Header;

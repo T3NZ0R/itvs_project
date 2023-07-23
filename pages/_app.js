@@ -1,8 +1,14 @@
 import React from 'react';
 
+
+import AppLayout from "../src/layout/AppLayout";
+import "../src/styles/global.scss";
+
 const MyApp = ({Component, pageProps}) => {
     return (
-        <Component {...pageProps}/>
+            <AppLayout>
+                <Component {...pageProps}/>
+            </AppLayout>
     );
 };
 
