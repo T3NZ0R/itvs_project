@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className={styles.footerTopWrapper}>
                     <div className={styles.footerContacts}>
                         <h1 className={styles.contactsHeader}>Контакти</h1>
-                        <p className={styles.contactsDepartment}>Кафедра ІТВС в НУ "Львівська Політехніка"</p>
+                        <p className={styles.contactsDepartment}>Кафедра ІТВС в НУ &quot;Львівська Політехніка&quot;</p>
                         <h2 className={styles.contactsEmail}>itvs.dept@lpnu.ua</h2>
                         <h4 className={styles.contactsPhone}>
                             <p className={styles.contactsPhoneTitle}>Телефон: </p> (032) 258-23-04
