@@ -2,7 +2,7 @@
 @import "mixins";
 
 .footerBackground {
-  background: $black;
+  //background: $black;
   padding: 70px 0 20px;
   color: $white;
   display: flex;
@@ -16,7 +16,7 @@
 }
 
 .footerWrapper {
-  max-width: $max-width;
+  width: $max-width;
 }
 
 .footerTopWrapper {
@@ -26,6 +26,7 @@
   flex-wrap: wrap;
   @media (max-width: 1210px) {
     flex-direction: column;
+    @include toRem(gap, 20)
   }
 
   @media (max-width: 600px) {
@@ -37,6 +38,10 @@
   width: $w35;
 
   @media (max-width: 600px) {
+    width: $w100;
+  }
+
+  @media (max-width: 1210px) {
     width: $w100;
   }
 
@@ -140,7 +145,9 @@
     @include toRem(margin-top, 80);
     width: $w100;
   }
-
+  @media (max-width: 1210px) {
+    width: $w100;
+  }
   .locationMap {
     width: $w100 !important;
   }

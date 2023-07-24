@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+.headerMain {
+  width: $w100;
+  display: flex;
+  justify-content: center;
+}
+
+.headerWrapper {
+  max-width: $max-width;
+  @include toRem(padding-top, 30);
+  @include toRem(padding-bottom, 30);
+}
+
+.headerLogo {
+
+}
