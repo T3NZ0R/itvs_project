@@ -4,15 +4,285 @@
 .headerMain {
   width: $w100;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background: url("../../public/icons/background.svg"), $black center;
+  background-size: cover;
+  border-bottom: $gray solid 0.5px;
 }
 
 .headerWrapper {
-  max-width: $max-width;
+  width: $max-width;
   @include toRem(padding-top, 30);
   @include toRem(padding-bottom, 30);
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $max-width) {
+    max-width: $w100;
+  }
+  //justify-content: space-between;
+  @media (max-width: 900px) {
+    @include toRem(padding-bottom, 0);
+    @include toRem(padding-top, 0);
+  }
+}
+
+.headerWebWrapper {
+  width: $w100;
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  @media (max-width: $max-width) {
+    @include toRem(padding, 15);
+  }
 }
 
 .headerLogo {
+  @include toRem(height, 56);
+}
+
+.headerLinksWrapper {
+  display: flex;
+  @include toRem(gap, 50);
+  align-items: center;
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.headerPagesLinks {
+  display: flex;
+  flex-direction: row;
+  @include toRem(gap, 30);
+}
+
+.headerPageLink {
+  font-family: $sub-font;
+  text-decoration: none;
+  color: $white;
+  @include toRem(font-size, 18);
+  opacity: $w40;
+
+  &:hover {
+    opacity: unset;
+  }
+}
+
+.headerDropdown {
+  &:hover {
+    .headerDropdownContent {
+      display: block;
+    }
+  }
+}
+
+.headerDropdownLink {
+  font-family: $sub-font;
+  text-decoration: none;
+  font-weight: 400;
+  color: $white;
+  @include toRem(font-size, 18);
+}
+
+.headerDropdownTitle {
+  display: flex;
+  @include toRem(gap, 5);
+  align-items: center;
+  opacity: $w40;
+
+  &:hover {
+    opacity: unset;
+  }
 
 }
+
+.arrowDown {
+  @include toRem(height, 10);
+}
+
+.headerDropdownContent {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background: rgba(10, 5, 17, 0.8);
+  border: 0.50px rgba(255, 255, 255, 0.10) solid;
+  min-width: 160px;
+  z-index: 1;
+  text-align: center;
+  @include toRem(padding, 20);
+  border-radius: $w10;
+  margin-left: -50px;
+}
+
+.headerDropdownContentLink {
+  display: block;
+  font-family: $sub-font;
+  @include toRem(font-size, 18);
+  font-weight: 400;
+  text-decoration: none;
+  color: $white;
+  opacity: $w40;
+  @include toRem(padding, 14);
+
+  &:hover {
+    opacity: $w100;
+  }
+
+}
+
+.headerDropdownDivider {
+  width: 100%;
+  background: #FFFFFF;
+  opacity: $w40;
+  @include toRem(height, 1);
+}
+
+.headerSocialWrapper {
+  display: flex;
+  @include toRem(gap, 15);
+
+}
+
+.headerSocialIcon {
+  height: 32px;
+  opacity: $w40;
+  cursor: pointer;
+
+  &:hover {
+    opacity: $w100;
+  }
+}
+
+.headerHamburgerMenu {
+  display: none;
+  @include toRem(width, 45);
+  @include toRem(height, 45);
+  @include toRem(padding-top, 5);
+  @include toRem(padding-bottom, 5);
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.headerHamburgerMenuLineTop, .headerHamburgerMenuLineCenter, .headerHamburgerMenuLineBottom {
+  width: $w100;
+  display: block;
+  @include toRem(height, 5);
+  background: $white;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+.headerHamburgerMenuLineTopOpened {
+  transform: translateY(15px) rotate(45deg);
+}
+
+.headerHamburgerMenuLineCenterOpened {
+  opacity: 0;
+}
+
+.headerHamburgerMenuLineBottomOpened {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+@keyframes collapse {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 143px;
+  }
+  50% {
+    height: 285px;
+  }
+  75% {
+    height: 428px;
+  }
+  100% {
+    height: 561px;
+  }
+}
+
+@keyframes collapse-reverse {
+  0% {
+    height: 561px;
+  }
+  25% {
+    height: 428px;
+  }
+  50% {
+    height: 285px;
+  }
+  75% {
+    height: 143px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+
+.headerHamburgerMenuContentOpened {
+  max-width: $max-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 561px;
+  overflow: hidden;
+  animation: collapse 0.3s;
+}
+.headerHamburgerMenuContentClosed {
+  max-width: $max-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 0;
+  animation: collapse-reverse 0.3s;
+}
+
+
+.headerHamburgerMenuContentLink {
+  display: block;
+  font-family: $sub-font;
+  @include toRem(font-size, 18);
+  font-weight: 400;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  opacity: $w40;
+  @include toRem(padding, 14);
+
+  &:hover {
+    opacity: $w100;
+  }
+
+}
+
+.headerHamburgerMenuDivider {
+  width: 100%;
+  background: #FFFFFF;
+  opacity: $w40;
+  @include toRem(height, 1);
+}
+
+.headerHamburgerSocialWrapper {
+  display: flex;
+  width: $w100;
+  @include toRem(padding, 20);
+  justify-content: space-around;
+  border-bottom: $gray solid 0.5px;
+}
+
+

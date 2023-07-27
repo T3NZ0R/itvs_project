@@ -6,9 +6,12 @@ const AppLayout = ({children}) => {
     return (
         <>
             <Header/>
-            {children}
+            <main>
+                {children}
+            </main>
             <Footer/>
-        </>);
+        </>
+    );
 };
 
 export default AppLayout;

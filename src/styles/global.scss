@@ -1,13 +1,17 @@
 @import "variables";
 @import "mixins";
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-body{
-  background:  url("../../public/icons/background.svg"), $black;
+body {
+  background: url("../../public/icons/background.svg"), $black center;
+  background-size: cover;
   color: $white;
 }
 
+main{
+margin-top: 115px;
+}
