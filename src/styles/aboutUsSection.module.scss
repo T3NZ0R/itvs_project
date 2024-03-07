@@ -1,0 +1,115 @@
+@import "variables";
+@import "mixins";
+
+
+.aboutUs {
+  background: $light;
+  width: $w100;
+  display: flex;
+  justify-content: center;
+
+}
+
+.aboutUsWrap {
+  width: $max-width;
+  padding-bottom: 120px;
+  padding-top: 120px;
+  @media (max-width: $max-width) {
+    width: $w100;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.aboutUsInfo {
+  width: $w100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: $max-width) {
+    max-height: 270px;
+  }
+
+  flex-wrap: wrap;
+}
+
+.aboutUsLogo {
+  width: $w20;
+  background: $black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: $max-width) {
+    width: $w30;
+  }
+  @media (max-width: 600px) {
+    width: $w100;
+    padding: 30px 0;
+    margin-bottom: 20px;
+  }
+}
+
+.aboutUsStaff {
+  width: 40%;
+  @media (max-width: $max-width) {
+    width: 67%;
+  }
+  @media (max-width: 600px) {
+    width: $w100;
+  }
+
+}
+.aboutUsStaffImg {
+  width: $w100;
+  border-radius: 12px;
+  @media (min-width: $max-width) {
+    max-height: 270px;
+  }
+
+}
+
+
+.aboutUsTextInfo {
+  color: $black;
+  @media (max-width: $max-width) {
+    width: $w100;
+  }
+}
+
+
+.aboutUsTitle {
+  font-family: $main-font;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 37px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  @media (max-width: 600px) {
+    font-size: 22px;
+  }
+}
+
+.aboutUsText {
+  color: $dark;
+  font-size: 18px;
+  font-family: $sub-font;
+  font-weight: 400;
+  line-height: 29px;
+  padding-bottom: 25px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+.aboutUsLink {
+  display: flex;
+  gap: 12px;
+  color: $dark;
+  font-size: 18px;
+  font-family: $sub-font;
+  font-weight: 700;
+  text-decoration: underline;
+}

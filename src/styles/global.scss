@@ -12,6 +12,20 @@ body {
   color: $white;
 }
 
-main{
-margin-top: 115px;
+main {
+  @include toRem(margin-top, 115);
+  width: $w100;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 900px) {
+    @include toRem(margin-top, 87);
+  }
+}
+
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+  height: 10px!important;
+}
+
+.swiper-scrollbar-drag{
+  background: $black!important;
 }

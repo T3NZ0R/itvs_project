@@ -1,0 +1,73 @@
+@import "variables";
+@import "mixins";
+
+
+.homeHero {
+  width: $w100;
+  display: flex;
+  justify-content: center;
+
+}
+
+.homeHeroWrap {
+  width: $max-width;
+  padding-bottom: 120px;
+  padding-top: 120px;
+  @media (max-width: $max-width) {
+    width: $w100;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.homeHeroSubtitle {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.homeHeroSubtitleInstituteWrap {
+  border: rgba(255, 255, 255, 0.15) 2px solid;
+  border-radius: 42px;
+}
+
+.homeHeroSubtitleInstitute {
+  background: $white;
+  color: $black;
+  padding: 24px 48px;
+  margin: 7px;
+  border-radius: 34px;
+  font-size: 20px;
+  font-family: $sub-font;
+  font-weight: 700;
+}
+
+.homeHeroSubtitleLocation {
+  display: flex;
+  gap: 5px;
+  opacity: $w40;
+  font-size: 24px;
+  font-family: $sub-font;
+  font-weight: 500;
+}
+
+.homeHeroTitle {
+  font-family: $main-font;
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.titleNumber {
+  font-family: $main-font;
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #f3ec78;
+  background-image: $orange-gradient;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}

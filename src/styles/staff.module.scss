@@ -1,0 +1,171 @@
+@import "variables";
+@import "mixins";
+
+.staffWrap {
+  @include toRem(padding-top, 100);
+  color: $white;
+  width: $max-width;
+  @media (max-width: 600px) {
+    @include toRem(padding-top, 50);
+  }
+}
+
+.staffTittle {
+  font-family: $main-font;
+  @include toRem(font-size, 72);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  @include toRem(padding-bottom, 60);
+  @media (max-width: 600px) {
+    @include toRem(font-size, 36);
+    @include toRem(padding, 15);
+    @include toRem(padding-bottom, 30);
+  }
+  @media (max-width: $max-width) {
+    @include toRem(padding-left, 15);
+    @include toRem(padding-right, 15);
+  }
+}
+
+.staffCardsWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400-30px, 1fr));
+  grid-gap: clamp(30px, 30px, 30px);
+  @include toRem(padding-bottom, 80);
+  @media (max-width: $max-width) {
+   @include toRem(padding-left, 15);
+   @include toRem(padding-right, 15);
+  }
+@media (max-width: 600px) {
+  grid-template-columns: repeat(auto-fit, minmax(300-30px, 1fr));
+}
+}
+
+.staffCardWrap {
+  background: $white;
+  color: $black;
+  @include toRem(border-radius, 20);
+  padding: 20px 20px 30px;
+  box-sizing: border-box;
+  flex: 0 0 calc(33.333% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    box-shadow: 0 0 14px 3px $gray;
+  }
+}
+
+.staffCardImage {
+  width: $w100;
+  @include toRem(padding-bottom, 40);
+}
+
+.staffCardName {
+  font-family: $main-font;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  @include toRem(font-size, 28);
+  @include toRem(line-height, 36.40);
+  font-weight: 800;
+  width: $w100;
+  @include toRem(padding-bottom, 10);
+}
+
+.staffCardDegree {
+  font-family: $sub-font;
+  @include toRem(font-size, 18);
+  @include toRem(line-height, 28.80);
+  font-weight: 400;
+  width: $w100;
+}
+
+.staffCardDivider {
+  width: 100%;
+  background: $black;
+  opacity: $w20;
+  @include toRem(height, 1);
+  margin: 20px 0;
+}
+
+.staffCardEmail {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 5px;
+  font-family: $sub-font;
+  @include toRem(font-size, 18);
+  @include toRem(line-height, 28.80);
+  font-weight: 400;
+  box-sizing: border-box;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+  }
+}
+
+.staffEmailLink {
+  text-decoration: none;
+  color: $black;
+  text-underline: none;
+}
+
+.staffCardEmail {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 5px;
+  font-family: $sub-font;
+  @include toRem(font-size, 18);
+  @include toRem(line-height, 28.80);
+  font-weight: 400;
+  box-sizing: border-box;
+  @include toRem(padding-bottom, 40);
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+  }
+}
+
+.staffEmailLink {
+  text-decoration: none;
+  color: $black;
+  text-underline: none;
+}
+
+.staffCardWiki {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $w100;
+  background: $black;
+  color: $white;
+  @include toRem(gap, 5);
+  @include toRem(border-radius, 30);
+  padding: 15px 0;
+  font-family: $sub-font;
+  @include toRem(font-size, 18);
+  @include toRem(line-height, 28.80);
+  font-weight: 700;
+  box-sizing: border-box;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+  }
+}
+
+.staffWikiLink {
+  text-decoration: none;
+  color: $black;
+  text-underline: none;
+  position: relative;
+}
+

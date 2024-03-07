@@ -11,7 +11,7 @@ $w20: 20%;
 $w30: 30%;
 $w35: 35%;
 $w40: 40%;
-$w45: 44.4%;
+$w45: 45%;
 $w50: 50%;
 $w60: 60%;
 $w70: 70%;
@@ -22,6 +22,8 @@ $w100: 100%;
 //colors
 
 $black: #0A0511;
+$dark: #29364F;
 $white: #FFFFFF;
-$orange-gradient: #FF6E02, #FEDE7D;
+$orange-gradient: linear-gradient(#FF6E02, #FEDE7D);
 $gray: rgba(255, 255, 255, 0.4);
+$light: #F3F3FC;

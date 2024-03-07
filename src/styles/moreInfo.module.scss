@@ -1,0 +1,151 @@
+@import "variables";
+@import "mixins";
+
+.moreInfo {
+  background: $light;
+  width: $w100;
+  display: flex;
+  justify-content: center;
+
+}
+
+.moreInfoWrap {
+  width: $max-width;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+  @media (max-width: $max-width) {
+    width: $w100;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.moreInfoTitle {
+  font-family: $main-font;
+  @include toRem(font-size, 54);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $black;
+  @include toRem(padding-bottom, 62);
+  @media (max-width: 700px) {
+    @include toRem(font-size, 36);
+  }
+}
+
+.moreInfoSlider {
+  width: $w100;
+  @media (max-width: $max-width) {
+  }
+}
+
+.moreInfoSlide {
+  position: relative;
+  overflow: hidden;
+}
+
+.moreInfoSlideWrap {
+  padding-bottom: 30px;
+}
+
+.moreInfoSlideImage {
+  width: $w100;
+  z-index: -1;
+}
+
+.moreInfoSlideImage {
+  border-radius: 30px;
+  @media (max-width: 450px) {
+    border-radius: 15px;
+  }
+  @media (max-width: 600px) {
+    border-radius: 20px;
+  }
+}
+
+.moreInfoSlideTextInfo {
+  color: $white;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (max-width: 450px) {
+    bottom: 20px;
+    left: 20px;
+    gap: 5px;
+  }
+  @media (max-width: 600px) {
+    bottom: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+}
+
+.moreInfoSlideTitle {
+  font-size: 32px;
+  font-family: $main-font;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 42px;
+  letter-spacing: 2px;
+  @media (max-width: 600px) {
+    line-height: 21px;
+    @include toRem(font-size, 18);
+  }
+
+}
+
+.moreInfoSlideDescription {
+  font-size: 18px;
+  font-family: $sub-font;
+  font-weight: 400;
+  opacity: $w80;
+  line-height: 29px;
+  @media (max-width: 450px) {
+    line-height: 15px;
+    @include toRem(font-size, 8);
+  }
+
+  @media (max-width: 600px) {
+    line-height: 15px;
+    @include toRem(font-size, 12);
+  }
+}
+
+.moreInfoSliderArrowIconWrap {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 22px;
+  border-radius: $w50;
+  background: $gray;
+  backdrop-filter: blur(54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    top: 10px;
+    right: 10px;
+    padding: 11px;
+  }
+
+  &:hover {
+    .moreInfoSliderArrowIcon {
+      transform: rotate(45deg);
+
+    }
+  }
+}
+
+.moreInfoSliderArrowIcon {
+  width: 40px;
+  transition: transform .7s ease-in-out;
+  @media (max-width: 600px) {
+    width: 20px;
+  }
+}
+
+

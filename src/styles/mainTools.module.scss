@@ -1,0 +1,87 @@
+@import "variables";
+@import "mixins";
+
+.mainTools{
+  background: $light;
+  width: $w100;
+  display: flex;
+  justify-content: center;
+}
+
+.mainToolsWrap{
+  width: $max-width;
+  padding-bottom: 120px;
+  @media (max-width: $max-width) {
+    width: $w100;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.mainToolsTitle{
+  font-family: $main-font;
+  @include toRem(font-size, 54);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $black;
+  @include toRem(padding-bottom, 62);
+  @media (max-width: 700px) {
+    @include toRem(font-size, 36);
+  }
+}
+
+.mainToolsContentWrap{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240-30px, 1fr));
+  grid-gap: clamp(30px, 30px, 30px);
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: clamp(15px, 15px, 15px);
+  }
+}
+
+.fraction{
+  grid-column: span 2;
+  background: $black;
+}
+
+.mainToolsItem{
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 36px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainToolsLastItem{
+  border-radius: 20px;
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+  color: $dark;
+  font-size: 35px;
+  font-family: $main-font;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.10);
+  @media (max-width: $max-width) {
+    grid-column: span 3;
+  }
+  @media (max-width: 960px) {
+    grid-column: span 2;
+  }
+}
+
+.mainToolsItemImage{
+  width: $w50;
+}
+
+.mainToolsItemTitle{
+ font-family: $sub-font;
+  font-weight: 800;
+  font-size: 22.15px;
+}
