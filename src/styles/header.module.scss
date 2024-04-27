@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   z-index: 3;
-  background: url("../../public/icons/background.svg"), $black center;
+  background: url("../assets/icons/background.svg"), $black center;
   background-size: cover;
   border-bottom: $gray 0.5px solid;
 }
@@ -103,6 +103,7 @@
 
 .arrowDown {
   @include toRem(height, 10);
+  width: auto;
 }
 
 .headerDropdownContent {
@@ -150,6 +151,7 @@
 
 .headerSocialIcon {
   height: 32px;
+  width: auto;
   opacity: $w40;
   cursor: pointer;
 

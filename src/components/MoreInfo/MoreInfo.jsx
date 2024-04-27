@@ -2,12 +2,20 @@ import React from 'react';
 
 import styles from "../../styles/moreInfo.module.scss"
 import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y, Navigation, Pagination, Scrollbar, Keyboard, Mousewheel} from "swiper/modules";
+import {A11y, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar} from "swiper/modules";
 
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
+import Image from "next/image";
+import Arrow from "@/assets/icons/arrow.svg"
+
+import Img1 from "@/assets/img/moreInfo/Rectangle 364.jpg";
+import Img2 from "@/assets/img/moreInfo/Rectangle 364 (1).jpg";
+import Img3 from "@/assets/img/moreInfo/Rectangle 364 (2).jpg";
+import Img4 from "@/assets/img/moreInfo/Rectangle 364 (3).jpg";
+import Img5 from "@/assets/img/moreInfo/Rectangle 364 (4).jpg";
 
 const MoreInfo = () => {
 
@@ -56,9 +64,11 @@ const MoreInfo = () => {
 
                     <SwiperSlide className={styles.moreInfoSlideWrap}>
                         <div className={styles.moreInfoSlide}>
-                            <img className={styles.moreInfoSlideImage} src={"img/moreInfo/Rectangle 364.jpg"} alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><img
-                                className={styles.moreInfoSliderArrowIcon} src={"icons/arrow.svg"} alt=""/></div>
+                            <Image className={styles.moreInfoSlideImage} src={Img1} alt="" />
+                            <div className={styles.moreInfoSliderArrowIconWrap}>
+                                <Image
+                                    className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" />
+                            </div>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Навчальний <br/>
@@ -73,10 +83,10 @@ const MoreInfo = () => {
                     </SwiperSlide>
                     <SwiperSlide className={styles.moreInfoSlideWrap}>
                         <div className={styles.moreInfoSlide}>
-                            <img className={styles.moreInfoSlideImage} src={"img/moreInfo/Rectangle 364 (1).jpg"}
-                                 alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><img
-                                className={styles.moreInfoSliderArrowIcon} src={"icons/arrow.svg"} alt=""/></div>
+                            <Image className={styles.moreInfoSlideImage} src={Img2}
+                                   alt=""/>
+                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Компанії <br/> Партнери кафедри
@@ -90,10 +100,10 @@ const MoreInfo = () => {
                     </SwiperSlide>
                     <SwiperSlide className={styles.moreInfoSlideWrap}>
                         <div className={styles.moreInfoSlide}>
-                            <img className={styles.moreInfoSlideImage} src={"img/moreInfo/Rectangle 364 (2).jpg"}
-                                 alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><img
-                                className={styles.moreInfoSliderArrowIcon} src={"icons/arrow.svg"} alt=""/></div>
+                            <Image className={styles.moreInfoSlideImage} src={Img3}
+                                   alt=""/>
+                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Студентська <br/>
@@ -108,10 +118,10 @@ const MoreInfo = () => {
                     </SwiperSlide>
                     <SwiperSlide className={styles.moreInfoSlideWrap}>
                         <div className={styles.moreInfoSlide}>
-                            <img className={styles.moreInfoSlideImage} src={"img/moreInfo/Rectangle 364 (3).jpg"}
-                                 alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><img
-                                className={styles.moreInfoSliderArrowIcon} src={"icons/arrow.svg"} alt=""/></div>
+                            <Image className={styles.moreInfoSlideImage} src={Img4}
+                                   alt="" />
+                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Міжнародна <br/> діяльність
@@ -125,10 +135,10 @@ const MoreInfo = () => {
                     </SwiperSlide>
                     <SwiperSlide className={styles.moreInfoSlideWrap}>
                         <div className={styles.moreInfoSlide}>
-                            <img className={styles.moreInfoSlideImage} src={"img/moreInfo/Rectangle 364 (4).jpg"}
-                                 alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><img
-                                className={styles.moreInfoSliderArrowIcon} src={"icons/arrow.svg"} alt=""/></div>
+                            <Image className={styles.moreInfoSlideImage} src={Img5}
+                                   alt=""/>
+                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Наукова <br/> діяльність

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import styles from "../../styles/mainTools.module.scss";
 import {useSelector} from "react-redux";
+import Image from "next/image";
 
 const MainTools = () => {
 
@@ -30,7 +31,7 @@ const MainTools = () => {
             window.removeEventListener('resize', setDimension);
         })
 
-    }, [screenSize]);
+    }, [screenSize, tools, responseTools]);
 
 
 
@@ -44,12 +45,12 @@ const MainTools = () => {
                 </h2>
 
                 <div className={styles.mainToolsContentWrap}>
-                    {responseTools.map(tool =>
-                        <div className={styles.mainToolsItem} key={tool.logo} style={tool.name === "Fontlab" ? {
+                    {responseTools.map((tool, index) =>
+                        <div className={styles.mainToolsItem} key={index} style={tool.name === "Fontlab" ? {
                             color: "#122940",
                             background: tool.background
                         } : {background: tool.background}}>
-                            <img className={styles.mainToolsItemImage} src={tool.logo} alt={tool.name}/>
+                            <Image className={styles.mainToolsItemImage} src={tool.logo} alt={tool.name} />
                             <h5 className={styles.mainToolsItemTitle}>{tool.name}</h5>
                         </div>)}
                     <div className={styles.mainToolsLastItem}> + ще {toolsNumber} </div>

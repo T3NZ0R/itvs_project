@@ -1,5 +1,19 @@
 import {createSlice} from "@reduxjs/toolkit";
 
+import Photoshop from '@/assets/img/tools/Photoshop.svg';
+import Illustrator from '@/assets/img/tools/Illustrator.svg';
+import Figma from '@/assets/img/tools/Figma.svg';
+import Axure from '@/assets/img/tools/Axure.svg';
+import Maya from '@/assets/img/tools/Maya.svg';
+import Atom from '@/assets/img/tools/Atom.svg';
+import VisualStudio from '@/assets/img/tools/VisualStudio.svg';
+import Maya2 from '@/assets/img/tools/Maya(2).svg';
+import PowerPoint from '@/assets/img/tools/PowerPoint.svg';
+import Fontlab from '@/assets/img/tools/Fontlab.svg';
+import Word from '@/assets/img/tools/Word.svg';
+import Exel from '@/assets/img/tools/Exel.svg';
+import Jira from '@/assets/img/tools/Jira.svg';
+
 
 const toolsSlice = createSlice({
     name: "toolsSlice",
@@ -7,67 +21,67 @@ const toolsSlice = createSlice({
         tools: [
             {
                 name:"Photoshop",
-                logo:"img/tools/Photoshop.svg",
+                logo:Photoshop,
                 background:"#264A66"
             },
             {
                 name:"Illustrator",
-                logo:"img/tools/Illustrator.svg",
+                logo:Illustrator,
                 background:"#FF9A00"
             },
             {
                 name:"Figma",
-                logo:"img/tools/Figma.svg",
+                logo:Figma,
                 background:"#373844"
             },
             {
                 name:"Axure",
-                logo:"img/tools/Axure.svg",
+                logo:Axure,
                 background:"#009CD9"
             },
             {
                 name:"Maya",
-                logo:"img/tools/Maya.svg",
+                logo:Maya,
                 background:"#09898D"
             },
             {
                 name:"Atom",
-                logo:"img/tools/Atom.svg",
+                logo:Atom,
                 background:"#009CD9"
             },
             {
                 name:"Visual Studio",
-                logo:"img/tools/Visual Studio.svg",
+                logo:VisualStudio,
                 background:"#7252AA"
             },
             {
                 name:"Maya",
-                logo:"img/tools/Maya(2).svg",
+                logo: Maya2,
                 background:"#09898D"
             },
             {
                 name:"Power Point",
-                logo:"img/tools/Power Point.svg",
+                logo:PowerPoint,
                 background:"#D35230"
             },
             {
                 name:"Fontlab",
-                logo:"img/tools/Fontlab.svg",
+                logo:Fontlab,
                 background:"#EFE9CB"
             },
             {
                 name:"Word",
-                logo:"img/tools/Word.svg",
+                logo:Word,
                 background:"#2B7BD3"
             },
             {
                 name:"Exel",
-                logo:"img/tools/Exel.svg",
+                logo:Exel,
                 background:"#2B7BD3"
             },
             {
                 name:"Jira",
-                logo:"img/tools/Jira.svg",
+                logo:Jira,
                 background:"#1871EC"
             },
         ]

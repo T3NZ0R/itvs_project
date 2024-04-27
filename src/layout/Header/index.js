@@ -2,7 +2,14 @@ import React, {useEffect, useState} from 'react';
 import Link from "next/link";
 import {useSelector} from "react-redux";
 
-import styles from "../../styles/header.module.scss"
+import styles from "@/styles/header.module.scss"
+import Image from "next/image";
+
+import Logo from '@/assets/icons/logo.svg';
+import ArrowDown from '@/assets/icons/arrowDown.svg';
+import Instagram from '@/assets/icons/instagram.svg';
+import Facebook from '@/assets/icons/facebook2.svg';
+
 
 const Header = () => {
 
@@ -39,7 +46,11 @@ const Header = () => {
         <header className={styles.headerMain}>
             <div className={styles.headerWrapper}>
                 <div className={styles.headerWebWrapper}>
-                    <div className={styles.headerLogo}><Link href={"/"}><img src={"icons/logo.svg"} alt="logo"/></Link></div>
+                    <div className={styles.headerLogo}>
+                        <Link href={"/"}>
+                            <Image src={Logo} alt="logo" />
+                        </Link>
+                    </div>
                     <div className={styles.headerHamburgerMenu} onClick={() => {
                         handleOpen();
                         handleStartClose();
@@ -56,7 +67,7 @@ const Header = () => {
                             <Link href={"/"} className={styles.headerPageLink}>Головна</Link>
                             <div className={styles.headerDropdown}>
                                 <div className={styles.headerDropdownTitle}>
-                                    <img className={styles.arrowDown} src={"icons/arrowDown.svg"} alt="arrowDown"/>
+                                    <Image className={styles.arrowDown} src={ArrowDown} alt="arrowDown" />
                                     <h3 className={styles.headerDropdownLink}>Про кафедру</h3>
                                 </div>
                                 <div className={styles.headerDropdownContent}>
@@ -79,10 +90,10 @@ const Header = () => {
                         </div>
                         <div className={styles.headerSocialWrapper}>
                             <Link href={"https://www.facebook.com/ITVSDepartment"} target={"_blank"}>
-                                <img className={styles.headerSocialIcon} src={"icons/instagram.svg"} alt="instagram"/>
+                                <Image className={styles.headerSocialIcon} src={Instagram} alt="instagram" />
                             </Link>
                             <Link href={"https://www.facebook.com/ITVSDepartment"} target={"_blank"}>
-                                <img className={styles.headerSocialIcon} src={"icons/facebook2.svg"} alt="facebook"/>
+                                <Image className={styles.headerSocialIcon} src={Facebook} alt="facebook" />
                             </Link>
                         </div>
                     </div>
@@ -108,10 +119,10 @@ const Header = () => {
                     <div className={styles.headerHamburgerSocialWrapper}>
 
                         <Link href={"https://www.facebook.com/ITVSDepartment"} target={"_blank"}>
-                            <img className={styles.headerSocialIcon} src={"icons/instagram.svg"} alt="instagram"/>
+                            <Image className={styles.headerSocialIcon} src={Instagram} alt="instagram" />
                         </Link>
                         <Link href={"https://www.facebook.com/ITVSDepartment"} target={"_blank"}>
-                            <img className={styles.headerSocialIcon} src={"icons/facebook2.svg"} alt="facebook"/>
+                            <Image className={styles.headerSocialIcon} src={Facebook} alt="facebook" />
                         </Link>
                     </div>
                 </div>}

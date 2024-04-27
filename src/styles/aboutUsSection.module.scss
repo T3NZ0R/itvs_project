@@ -63,6 +63,7 @@
 }
 .aboutUsStaffImg {
   width: $w100;
+  height: auto;
   border-radius: 12px;
   @media (min-width: $max-width) {
     max-height: 270px;

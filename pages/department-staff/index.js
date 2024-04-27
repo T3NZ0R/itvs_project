@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from "react-redux";
 
 import styles from '../../src/styles/staff.module.scss'
-import StaffCard from "../../src/components/StaffCard/StaffCard";
+import StaffCard from "@/components/StaffCard/StaffCard";
 
 const DepartmentStaff = () => {
 

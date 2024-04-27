@@ -186,6 +186,7 @@
 
     .locationIcon {
       @include toRem(height, 18);
+      width: auto;
 
       @media (max-width: 600px) {
         margin-top: -18px;

@@ -1,6 +1,11 @@
 import React from 'react';
-import styles from "../../styles/aboutUsSection.module.scss"
 import Link from "next/link";
+import Image from "next/image";
+
+import styles from "@/styles/aboutUsSection.module.scss"
+import Logo from '@/assets/icons/logo.svg';
+import Arrow from '@/assets/icons/small_long_right.svg';
+import Staff from '@/assets/img/staff/all.jpg';
 
 const AboutUsSection = () => {
     return (
@@ -8,10 +13,10 @@ const AboutUsSection = () => {
             <div className={styles.aboutUsWrap}>
                 <div className={styles.aboutUsInfo}>
                     <div className={styles.aboutUsLogo}>
-                        <img src={"icons/logo.svg"} alt="logo"/>
+                        <Image src={Logo} alt="logo" />
                     </div>
-                    <div className={styles.aboutUsStaff}><img className={styles.aboutUsStaffImg}
-                                                              src={"img/staff/all.jpg"} alt=""/></div>
+                    <div className={styles.aboutUsStaff}><Image className={styles.aboutUsStaffImg}
+                                                              src={Staff} alt="" /></div>
                     <div className={styles.aboutUsTextInfo}>
                         <h4 className={styles.aboutUsTitle}>Про нас</h4>
                         <p className={styles.aboutUsText}>У 1998 році на кафедрі “Автоматизовані системи <br/>
@@ -20,8 +25,8 @@ const AboutUsSection = () => {
                             2001 р. був перейменований на „Видавничо- <br/>
                             поліграфічну справу”...
                         </p>
-                        <Link href={"#"} className={styles.aboutUsLink}><p>Читати далі</p> <img
-                            src={"icons/small_long_right.svg"} alt=""/></Link>
+                        <Link href={"#"} className={styles.aboutUsLink}><p>Читати далі</p> <Image
+                            src={Arrow} alt="" /></Link>
                     </div>
                 </div>
             </div>
