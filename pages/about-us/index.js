@@ -1,14 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 const AboutUs = () => {
-    const router = useRouter()
-    const {tab} = router.query
-    return (
-        <div>
-            {tab}
-        </div>
-    );
+  const router = useRouter();
+  const { tab } = router.query;
+  return <div>{tab}wwww</div>;
 };
 
 export default AboutUs;
