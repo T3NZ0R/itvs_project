@@ -1,0 +1,111 @@
+@import 'variables';
+@import 'mixins';
+
+.LearnMore {
+  background: $light;
+  font-family: $main-font;
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+  flex-direction: column;
+  color: $black;
+}
+.NavigationBar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+
+.NavigationBarTitle {
+  font-size: 54px;
+  text-align: start;
+  font-weight: 800px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+}
+.NavigationBarList {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffff;
+  gap: 20px;
+  padding: 25px 20px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+  list-style-type: none;
+}
+.NavigationBarItems {
+  font-size: 18px;
+  font-weight: 500;
+  color: $dark;
+  text-decoration: none;
+  padding: 15px 15px;
+  border-radius: 30px;
+}
+.NavigationBarItems:hover {
+  background: $dark;
+  color: #ffff;
+  transition: 0.5s;
+}
+.StudyInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 708px;
+  margin-top: 100px;
+}
+.StudyInfoTitle {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.StudyInfoDescr {
+  font-size: 16px;
+  font-weight: 400px;
+  color: $dark;
+  line-height: 25.6px;
+  margin-bottom: 50px;
+}
+
+.StudyInfoSubTitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.CardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.CardInfoTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.CardInfoDescr {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+}
+
+.CardInfoBTN {
+  background: black;
+  padding: 15px 10px;
+  border-radius: 30px;
+}
+.CardLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700px;
+  color: #ffff;
+  text-decoration: none;
+}
+.CardInfoIcon {
+  margin-left: 15px;
+}

@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'mixins';
+
+.Hero {
+  width: 100vw;
+  height: 500px;
+  font-family: $main-font;
+  display: flex;
+}
+.HeroWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  margin-left: 10vw;
+  gap: 20vw;
+}
+
+.HeroTitle {
+  font-family: $main-font;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 800;
+  @media (max-width: 600px) {
+    width: $w100;
+    font-size: 36px;
+    padding: 0 15px;
+  }
+}
+
+.HeroText {
+  margin-top: -10vw;
+}
+
+.HeroTitleText {
+  font-family: $main-font;
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #f3ec78;
+  background-image: $orange-gradient;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  @media (max-width: 600px) {
+    width: $w100;
+    font-size: 36px;
+    width: $w100;
+  }
+}
+.HeroSubTitle {
+  display: flex;
+  gap: 5px;
+  opacity: $w40;
+  font-size: 24px;
+  font-family: $sub-font;
+  font-weight: 500;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    width: $w100;
+  }
+}
+
+// .HeroArrowBorder1 {
+//   padding: 30px 32px;
+//   border-radius: 100%;
+//   opacity: 5%;
+//   border: 1px solid rgba(255, 255, 255, 1);
+//   justify-content: center;
+//   align-items: center;
+//   .HeroArrowBorder2 {
+//     padding: 30px 32px;
+//     border-radius: 100%;
+//     opacity: 10%;
+//     border: 1px solid rgba(255, 255, 255, 1);
+//     .HeroArrowBorder3 {
+//       padding: 30px 32px;
+//       border-radius: 100%;
+//       opacity: 23%;
+//       border: 1px solid rgba(255, 255, 255, 1);
+//     }
+.HeroBGArrow {
+  background: #ffff;
+  border-radius: 50%;
+  padding: 30px 32px;
+}
+//   }
+// }
+
+.HeroVideo {
+  position: relative;
+  margin-top: 30px;
+}

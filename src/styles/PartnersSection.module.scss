@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+.Partners {
+  font-family: $main-font;
+  display: flex;
+  flex-direction: row;
+  background: $light;
+  color: black;
+  justify-content: space-evenly;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.PartnersText {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 425px;
+}
+.PartnersTitle {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 800;
+  color: black;
+}
+.PartnersSubTitle {
+  color: rgba(41, 54, 79, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+.PartnersLink {
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  justify-items: center;
+  color: rgba(41, 54, 79, 1);
+}
+.PartnersIcon {
+  margin-left: 10px;
+}
+.PartnersLogos {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.PartnersItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 216px;
+  height: 170px;
+}
