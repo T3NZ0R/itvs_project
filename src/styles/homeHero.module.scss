@@ -1,22 +1,22 @@
-@import "variables";
-@import "mixins";
-
+@import 'variables';
+@import 'mixins';
 
 .homeHero {
   width: $w100;
   display: flex;
   justify-content: center;
-
 }
 
 .homeHeroWrap {
   width: $max-width;
   padding-bottom: 120px;
   padding-top: 120px;
-  @media (max-width: $max-width) {
+  @media (max-width: 600px) {
     width: $w100;
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -25,11 +25,25 @@
   gap: 40px;
   align-items: center;
   margin-bottom: 30px;
+  @media (max-width: 600px) {
+    width: $w100;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .homeHeroSubtitleInstituteWrap {
   border: rgba(255, 255, 255, 0.15) 2px solid;
   border-radius: 42px;
+  @media (max-width: 600px) {
+    border: none;
+    border-radius: 60px;
+    width: $w100;
+    justify-content: center;
+  }
 }
 
 .homeHeroSubtitleInstitute {
@@ -41,6 +55,13 @@
   font-size: 20px;
   font-family: $sub-font;
   font-weight: 700;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+  }
 }
 
 .homeHeroSubtitleLocation {
@@ -50,6 +71,16 @@
   font-size: 24px;
   font-family: $sub-font;
   font-weight: 500;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    width: $w100;
+  }
 }
 
 .homeHeroTitle {
@@ -57,6 +88,11 @@
   font-size: 70px;
   font-weight: 800;
   text-transform: uppercase;
+  @media (max-width: 600px) {
+    width: $w100;
+    font-size: 36px;
+    padding: 0 15px;
+  }
 }
 
 .titleNumber {
@@ -70,4 +106,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  @media (max-width: 600px) {
+    width: $w100;
+    font-size: 36px;
+    width: $w100;
+  }
+}
+
+.homeHeroSubtitleLocationIMG {
+  @media (max-width: 600px) {
+    width: 20px;
+    height: 20px;
+  }
 }
