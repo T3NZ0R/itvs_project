@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
@@ -7,9 +7,22 @@ import StudyImg2 from '@/assets/img/Rectangle315.png'
 import StudyImg3 from '@/assets/img/Rectangle316.png'
 import ArrowRightTop from '@/assets/icons/ArrowRightTop.svg'
 import styles from '@/styles/LearnMoreSection.module.scss'
+import { useRouter } from 'next/router';
 
 
 const LernMore = () => {
+
+
+    const [activeRoute, setActiveRoute] = useState(null);
+    const router = useRouter();
+
+    const handleNavigation = (query) => {
+        setActiveRoute(query);
+        router.push({
+            pathname: '/about-us',
+            query: { tab: query },
+        }, undefined, { shallow: true });
+    };
 
 
     const { routesDropdown } = useSelector(
@@ -37,23 +50,24 @@ const LernMore = () => {
     },]
     return (
         <section className={styles.LearnMore}>
-            <div className=''>
+            <div className={styles.LearnMoreWrap}>
                 <div className={styles.NavigationBar}>
+
                     <h1 className={styles.NavigationBarTitle}>Дізнайтеся більше про кафедру</h1>
                     <ul className={styles.NavigationBarList}>
                         {routesDropdown.map((route) =>
                             <React.Fragment key={route.title}>
-                                <li>
-                                    <Link className={styles.NavigationBarItems}
-                                        href={{
-                                            pathname: '/about-us',
-                                            query: { tab: route.query }
-                                        }}>{route.title}</Link>
+                                <li
+                                    className={`${styles.NavigationBarItems} ${activeRoute === route.query ? styles.Active : ''}`}
+                                    onClick={() => handleNavigation(route.query)}
+                                >
+                                    {route.title}
 
                                 </li>
                             </React.Fragment>)
                         }
                     </ul>
+
                 </div>
 
                 <div className={styles.StudyInfo}>
@@ -79,8 +93,8 @@ const LernMore = () => {
                     <div>
                         {Data.map((card) => (
                             <div key={card.id}>
-                                <div>
-                                    <Image src={card.src} alt={card.alt} />
+                                <div className={styles.CardImg1} >
+                                    <Image className={styles.CardImg} src={card.src} alt={card.alt} />
                                 </div>
                                 <div className={styles.CardInfo}>
                                     <h1 className={styles.CardInfoTitle}>{card.title}</h1>
@@ -94,7 +108,7 @@ const LernMore = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
 
     )
 };

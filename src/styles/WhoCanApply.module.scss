@@ -3,58 +3,120 @@
 
 .WhoCanApply {
   font-family: $main-font;
-  width: $w100;
-  display: flex;
-  flex-direction: column;
   background: $light;
   color: black;
+  width: $w100;
+  display: flex;
+  justify-content: center;
+}
+.WhoCanApplyWrap {
+  width: $max-width;
 }
 
 .TopItem {
+  width: $w100;
+  margin-top: 30px;
   display: flex;
-  justify-content: center;
   flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-.VideoContent {
-  margin-top: -25vh;
-}
+  gap: 30px;
+  @media (max-width: 600px) {
+    width: fit-content;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .VideoContent {
+    max-width: 708px;
+    max-height: 362px;
+    margin-top: -30vh;
+    @media (max-width: 600px) {
+      margin-top: -20vh;
+      max-width: 345px;
+      max-height: 200px;
+    }
 
-.TextContent {
-  width: 410px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.Right {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    .Video {
+      width: 40vw;
+      height: 100%;
+      border-radius: 10px;
+      @media (max-width: 600px) {
+        width: 345px;
+        height: 200px;
+      }
+    }
+  }
+  .TextContent {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: $w50;
+    @media (max-width: 600px) {
+      width: $w100;
+    }
+
+    .Right {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 20px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+      .RightNumber {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 .CardItem {
-  margin-top: 15vh;
+  margin-top: 10%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-}
-.CardText {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  line-height: 28.8px;
-  max-width: 360px;
-  font-size: 18px;
-  font-weight: 400;
-}
-.CardTitle {
-  font-weight: 800;
-  font-size: 28px;
-  line-height: 36.4px;
-  text-transform: uppercase;
-}
-.CardSubTitle {
-  color: rgba(41, 54, 79, 1);
+  justify-content: space-between;
+
+  .CardText {
+    max-width: 372px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    @media (max-width: 600px) {
+      max-width: 345px;
+      padding: 0 15px;
+    }
+    .CardTitle {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 36.4px;
+      @media (max-width: 600px) {
+        font-size: 22px;
+        line-height: 26.4px;
+      }
+    }
+    .CardSubTitle {
+      color: $dark;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28.8px;
+      @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 25.6px;
+      }
+    }
+  }
+  .CardIMG1 {
+    max-width: 708px;
+    max-height: 461px;
+    @media (max-width: 600px) {
+      display: none;
+    }
+    .CardIMG {
+      width: 100%;
+      height: auto;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 }

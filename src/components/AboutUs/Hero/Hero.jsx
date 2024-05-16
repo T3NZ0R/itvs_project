@@ -6,22 +6,19 @@ import styles from '@/styles/AboutUsStylesHero.module.scss';
 
 const AboutUs = () => {
     return (
-        <section className={styles.Hero}>
-            <div className={styles.HeroWrap}>
-                <div className={styles.HeroText}>
-                    <h1 className={styles.HeroTitle}>
-                        КАФЕДРА <span className={styles.HeroTitleText}>ІТВС</span>
+        <section className={styles.AboutUsHero}>
+            <div className={styles.AboutUsHeroWrap}>
+                <div className={styles.AboutUsHeroText}>
+                    <h1 className={styles.AboutUsHeroTitle}>
+                        КАФЕДРА <span className={styles.AboutUsHeroTitleText}>ІТВС</span>
                     </h1>
-                    <p className={styles.HeroSubTitle}>Інформаційні технології видавничої страви</p>
+                    <p className={styles.AboutUsHeroSubTitle}>Інформаційні технології видавничої страви</p>
 
                 </div>
-                <div className=''>
-                    <div className=''>
-                        <div className=''>
-                            <div className={styles.HeroBGArrow}>
-                                <Image src={ArrowDownMD} alt="ArrowDownMD" />
-                            </div>
-                        </div>
+
+                <div className={styles.ArrowBorder}>
+                    <div className={styles.AboutUsHeroBGArrow}>
+                        <Image src={ArrowDownMD} alt="ArrowDownMD" />
                     </div>
                 </div>
             </div>

@@ -26,17 +26,19 @@ const Partners = () => {
     ]
     return (
         <section className={styles.Partners}>
-            <div className={styles.PartnersText}>
-                <h1 className={styles.PartnersTitle}>Партнери кафедри</h1>
-                <p className={styles.PartnersSubTitle}>Також нашу кафедру підтримують такі компанії, як Soft Serve, Embrox Solutions, Global Logic та інші.</p>
-                <Link className={styles.PartnersLink} href='#'>Дізнатися більше <Image className={styles.PartnersIcon} src={rightrow} alt="ArrowRight" /></Link>
-            </div>
-            <div className={styles.PartnersLogos}>
-                {PartnersLogos.map((logos) => (
-                    <div className={styles.PartnersItems} key={logos.id} style={{ background: `${logos.color}` }} >
-                        <Image src={logos.src} alt={logos.alt} />
-                    </div>
-                ))}
+            <div className={styles.PartnersWrap}>
+                <div className={styles.PartnersText}>
+                    <h1 className={styles.PartnersTitle}>Партнери кафедри</h1>
+                    <p className={styles.PartnersSubTitle}>Також нашу кафедру підтримують такі компанії, як Soft Serve, Embrox Solutions, Global Logic та інші.</p>
+                    <Link className={styles.PartnersLink} href='#'>Дізнатися більше <Image className={styles.PartnersIcon} src={rightrow} alt="ArrowRight" /></Link>
+                </div>
+                <div className={styles.PartnersLogos}>
+                    {PartnersLogos.map((logos) => (
+                        <div className={styles.PartnersItems} key={logos.id} style={{ background: `${logos.color}` }} >
+                            <Image className={styles.PartnersIcons} src={logos.src} alt={logos.alt} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     )

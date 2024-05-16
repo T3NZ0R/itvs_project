@@ -2,57 +2,81 @@
 @import 'mixins';
 
 .LearnMore {
+  padding-top: 100px;
   background: $light;
-  font-family: $main-font;
+  width: $w100;
   display: flex;
-  padding: 100px;
+  color: black;
   justify-content: center;
-  flex-direction: column;
-  color: $black;
+  padding-bottom: 100px;
+}
+.LearnMoreWrap {
+  width: $max-width;
+  @media (max-width: 600px) {
+    padding: 0 15px;
+  }
 }
 .NavigationBar {
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 30px;
 }
 
 .NavigationBarTitle {
-  font-size: 54px;
+  display: flex;
   text-align: start;
+  font-size: 54px;
   font-weight: 800px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+  @media (max-width: 600px) {
+    font-size: 32px;
+    font-weight: 800;
+  }
 }
 .NavigationBarList {
   display: flex;
   flex-direction: row;
   background-color: #ffff;
-  gap: 20px;
-  padding: 25px 20px;
+  justify-content: space-between;
+  padding: 20px 20px;
   border-radius: 40px;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
   list-style-type: none;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+  }
 }
 .NavigationBarItems {
   font-size: 18px;
   font-weight: 500;
   color: $dark;
+  cursor: pointer;
+  white-space: nowrap;
   text-decoration: none;
-  padding: 15px 15px;
+  padding: 15px 20px;
   border-radius: 30px;
+  @media (max-width: 1100px) {
+    padding: 20px 50px;
+  }
 }
-.NavigationBarItems:hover {
+.Active {
   background: $dark;
   color: #ffff;
-  transition: 0.5s;
+  transition: 1s;
 }
 .StudyInfo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 708px;
+  max-width: 708px;
   margin-top: 100px;
+  @media (max-width: 600px) {
+    // max-width: 345px;
+  }
 }
 .StudyInfoTitle {
   margin-bottom: 30px;
@@ -66,6 +90,9 @@
   color: $dark;
   line-height: 25.6px;
   margin-bottom: 50px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 }
 
 .StudyInfoSubTitle {
@@ -90,6 +117,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 }
 
 .CardInfoBTN {
@@ -108,4 +138,18 @@
 }
 .CardInfoIcon {
   margin-left: 15px;
+}
+.CardImg1 {
+  @media (max-width: 600px) {
+    // width: 345px;
+    // height: 224px;
+    max-width: 708px;
+    max-height: 461px;
+  }
+  .CardImg {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
 }

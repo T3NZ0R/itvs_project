@@ -27,8 +27,8 @@
   margin-bottom: 30px;
   @media (max-width: 600px) {
     width: $w100;
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
     gap: 30px;
     display: flex;
     flex-direction: column;
@@ -72,6 +72,7 @@
   font-family: $sub-font;
   font-weight: 500;
   @media (max-width: 600px) {
+    width: $w100;
     font-size: 16px;
     display: flex;
     flex-direction: row;
