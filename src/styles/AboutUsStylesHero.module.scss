@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'mixins';
-
 .AboutUsHero {
   width: $w100;
   display: flex;
@@ -13,10 +12,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     width: $w100;
     padding-left: 15px;
     padding-right: 15px;
+    // flex-direction: column;
+
+    // gap: 30px;
+  }
+  @media (max-width: 600px) {
+    width: $w100;
+    padding: 150px 15px 130px;
     flex-direction: column;
 
     gap: 30px;
@@ -37,7 +43,7 @@
   @media (max-width: 600px) {
     // width: $w100;
     font-size: 36px;
-    padding: 0 15px;
+    // padding: 0 15px;
   }
 }
 
@@ -67,7 +73,7 @@
   @media (max-width: 600px) {
     width: $w50;
     font-size: 18px;
-    padding: 0 15px;
+    // padding: 0 15px;
   }
 }
 

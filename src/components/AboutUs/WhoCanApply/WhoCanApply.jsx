@@ -9,11 +9,13 @@ const WhoCanApply = () => {
         <section className={styles.WhoCanApply}>
             <div className={styles.WhoCanApplyWrap}>
                 <div className={styles.TopItem}>
+
                     <div className={styles.VideoContent}>
                         <iframe className={styles.Video}
                             src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         </iframe>
                     </div>
+
                     <div className={styles.TextContent}>
                         <p className={styles.Right}>Випускників <span className={styles.RightNumber}>1500+</span></p>
                         <p className={styles.Right}>Рік заснування кафедри<span className={styles.RightNumber}>1999 рік</span></p>

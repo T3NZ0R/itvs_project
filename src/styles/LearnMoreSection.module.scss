@@ -12,7 +12,7 @@
 }
 .LearnMoreWrap {
   width: $max-width;
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     padding: 0 15px;
   }
 }
@@ -23,6 +23,7 @@
 }
 
 .NavigationBarTitle {
+  font-family: $main-font;
   display: flex;
   text-align: start;
   font-size: 54px;
@@ -35,6 +36,7 @@
   }
 }
 .NavigationBarList {
+  font-family: $sub-font;
   display: flex;
   flex-direction: row;
   background-color: #ffff;
@@ -45,8 +47,10 @@
   list-style-type: none;
   @media (max-width: 1100px) {
     flex-direction: column;
+    padding: 10px 0;
     gap: 20px;
     align-items: center;
+    text-align: center;
     border-radius: 10px;
   }
 }
@@ -57,10 +61,11 @@
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 10px 15px;
   border-radius: 30px;
   @media (max-width: 1100px) {
-    padding: 20px 50px;
+    padding: 20px 30px;
+    width: $w50;
   }
 }
 .Active {
@@ -75,16 +80,18 @@
   max-width: 708px;
   margin-top: 100px;
   @media (max-width: 600px) {
-    // max-width: 345px;
+    max-width: 345px;
   }
 }
 .StudyInfoTitle {
+  font-family: $main-font;
   margin-bottom: 30px;
   font-size: 28px;
   font-weight: 800;
   text-transform: uppercase;
 }
 .StudyInfoDescr {
+  font-family: $sub-font;
   font-size: 16px;
   font-weight: 400px;
   color: $dark;
@@ -96,6 +103,7 @@
 }
 
 .StudyInfoSubTitle {
+  font-family: $sub-font;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 700;
@@ -109,11 +117,13 @@
   margin-bottom: 40px;
 }
 .CardInfoTitle {
+  font-family: $sub-font;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 .CardInfoDescr {
+  font-family: $sub-font;
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
@@ -128,6 +138,7 @@
   border-radius: 30px;
 }
 .CardLink {
+  font-family: $sub-font;
   display: flex;
   justify-content: center;
   align-items: center;
