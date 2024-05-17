@@ -9,7 +9,8 @@ import styles from '@/styles/AboutUsMain.module.scss';
 
 const AboutUs = () => {
   const router = useRouter();
-  const { tab } = router.query;
+  const {tab} = router.query;
+
   return (
     <div className={styles.AboutUsWrap}>
       <Hero />
