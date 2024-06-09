@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
@@ -13,8 +13,16 @@ import { useRouter } from 'next/router';
 const LernMore = () => {
 
 
-    const [activeRoute, setActiveRoute] = useState(null);
     const router = useRouter();
+    const { tab } = router.query;
+    const [activeRoute, setActiveRoute] = useState(tab);
+
+    useEffect(() => {
+        if (tab) {
+            setActiveRoute(tab);
+        }
+    }, [tab]);
+
 
     const handleNavigation = (query) => {
         setActiveRoute(query);
@@ -69,44 +77,64 @@ const LernMore = () => {
                     </ul>
 
                 </div>
+                {activeRoute && (
+                    activeRoute === 'education' ? (
 
-                <div className={styles.StudyInfo}>
-                    <h1 className={styles.StudyInfoTitle}>Навчання на спеціальності</h1>
-                    <p className={styles.StudyInfoDescr}>
-                        Кафедра здійснює підготовка фахівців за спеціальністю 186 «Видавництво та поліграфія» (UI/UX
-                        Design) та магістрів за спеціальністю 186 «Видавництво та поліграфія» із спеціалізацією
-                        «Комп`ютерні технології та системи видавничо-поліграфічних виробництв».
-                    </p>
-                    <div>
-                        <h1 className={styles.StudyInfoSubTitle}>Переваги спеціальності</h1>
-                        <p className={styles.StudyInfoDescr}>
-                            Переваги спеціальності 186 Видавництво та поліграфія в тому, що спеціалізовані знання в
-                            області комп`ютерної верстки та поліграфічних технологій «нанизуються» на фундаментальні
-                            знання в області комп`ютерних наук в цілому. Сюди входить програмування, адміністрування
-                            комп`ютерних систем, методи і засоби проектування інформаційних систем і технологій. В основі
-                            навчального процесу лежить вивчення основ композиції та технологій комп’ютерного дизайну,
-                            комп`ютерної анімації, UI/UX дизайну, додрукарського опрацювання інформації,
-                            інструментальних засобів WEB-дизайну, технологій 3D моделювання, проектування електронних
-                            і мультимедійних видань, інформаційних систем прийняття рішень та управління.
-                        </p>
-                    </div>
-                    <div>
-                        {Data.map((card) => (
-                            <div key={card.id}>
-                                <div className={styles.CardImg1} >
-                                    <Image className={styles.CardImg} src={card.src} alt={card.alt} />
-                                </div>
-                                <div className={styles.CardInfo}>
-                                    <h1 className={styles.CardInfoTitle}>{card.title}</h1>
-                                    <p className={styles.CardInfoDescr}>{card.descr}</p>
+                        <div className={styles.StudyInfo}>
+                            <h1 className={styles.StudyInfoTitle}>Навчання на спеціальності</h1>
+                            <p className={styles.StudyInfoDescr}>
+                                Кафедра здійснює підготовка фахівців за спеціальністю 186 «Видавництво та поліграфія» (UI/UX
+                                Design) та магістрів за спеціальністю 186 «Видавництво та поліграфія» із спеціалізацією
+                                «Комп`ютерні технології та системи видавничо-поліграфічних виробництв».
+                            </p>
+                            <div>
+                                <h1 className={styles.StudyInfoSubTitle}>Переваги спеціальності</h1>
+                                <p className={styles.StudyInfoDescr}>
+                                    Переваги спеціальності 186 Видавництво та поліграфія в тому, що спеціалізовані знання в
+                                    області комп`ютерної верстки та поліграфічних технологій «нанизуються» на фундаментальні
+                                    знання в області комп`ютерних наук в цілому. Сюди входить програмування, адміністрування
+                                    комп`ютерних систем, методи і засоби проектування інформаційних систем і технологій. В основі
+                                    навчального процесу лежить вивчення основ композиції та технологій комп’ютерного дизайну,
+                                    комп`ютерної анімації, UI/UX дизайну, додрукарського опрацювання інформації,
+                                    інструментальних засобів WEB-дизайну, технологій 3D моделювання, проектування електронних
+                                    і мультимедійних видань, інформаційних систем прийняття рішень та управління.
+                                </p>
+                            </div>
+                            <div>
+                                {Data.map((card) => (
+                                    <div key={card.id}>
+                                        <div className={styles.CardImg1} >
+                                            <Image className={styles.CardImg} src={card.src} alt={card.alt} />
+                                        </div>
+                                        <div className={styles.CardInfo}>
+                                            <h1 className={styles.CardInfoTitle}>{card.title}</h1>
+                                            <p className={styles.CardInfoDescr}>{card.descr}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                                <div className={styles.CardInfoBTN}>
+                                    <Link className={styles.CardLink} href={'/'}>Перейти на головну <Image className={styles.CardInfoIcon} src={ArrowRightTop} alt='ArrowRightTop' /></Link>
                                 </div>
                             </div>
-                        ))}
-                        <div className={styles.CardInfoBTN}>
-                            <Link className={styles.CardLink} href={'/'}>Перейти на головну <Image className={styles.CardInfoIcon} src={ArrowRightTop} alt='ArrowRightTop' /></Link>
                         </div>
-                    </div>
-                </div>
+                    ) : activeRoute === "international-activity" ? (
+                        <div className={styles.StudyInfoTitle}>international-activity</div>
+                    ) :
+                        activeRoute === "partners-of-the-department" ? (
+                            <div className={styles.StudyInfoTitle}>partners-of-the-department</div>
+                        ) :
+                            activeRoute === "history-of-the-department" ? (
+                                <div className={styles.StudyInfoTitle}>history-of-the-department</div>
+                            ) :
+                                activeRoute === "student-science" ? (
+                                    <div className={styles.StudyInfoTitle}>student-science</div>
+                                ) :
+                                    activeRoute === 'research-activities' ? (
+                                        <div className={styles.StudyInfoTitle}>research-activities</div>
+                                    )
+                                        : null
+
+                )}
             </div>
         </section >
 
