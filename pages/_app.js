@@ -1,10 +1,10 @@
 import React from 'react';
 import {Provider} from "react-redux";
 
-import AppLayout from "../src/layout/AppLayout";
-import {store} from "../src/store/store.config";
+import AppLayout from "@/layout/AppLayout";
+import {store} from "@/store/store.config";
 
-import "../src/styles/global.scss";
+import "@/styles/global.scss";
 
 const MyApp = ({Component, pageProps}) => {
     return (

@@ -5,19 +5,25 @@
   width: $w100;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .homeHeroWrap {
   width: $max-width;
   padding-bottom: 120px;
   padding-top: 120px;
-  @media (max-width: 600px) {
+  box-sizing: border-box;
+  @media (max-width: $max-width) {
     width: $w100;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 50px 15px;
+  }
+  @media (max-width: $mobile-width) {
     display: flex;
     flex-direction: column-reverse;
+    padding: 50px 15px 20px;
   }
+
 }
 
 .homeHeroSubtitle {
@@ -25,12 +31,12 @@
   gap: 40px;
   align-items: center;
   margin-bottom: 30px;
-  @media (max-width: 600px) {
+  @media (max-width: $max-width) {
     width: $w100;
-    // padding-left: 15px;
-    // padding-right: 15px;
     gap: 30px;
-    display: flex;
+  }
+  @media (max-width: $mobile-width) {
+    width: $w100;
     flex-direction: column;
   }
 }
@@ -38,7 +44,7 @@
 .homeHeroSubtitleInstituteWrap {
   border: rgba(255, 255, 255, 0.15) 2px solid;
   border-radius: 42px;
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-width) {
     border: none;
     border-radius: 60px;
     width: $w100;
@@ -49,18 +55,27 @@
 .homeHeroSubtitleInstitute {
   background: $white;
   color: $black;
+  white-space: nowrap;
   padding: 24px 48px;
   margin: 7px;
   border-radius: 34px;
   font-size: 20px;
   font-family: $sub-font;
   font-weight: 700;
-  @media (max-width: 600px) {
-    font-size: 16px;
-    text-align: center;
-    color: $white;
-    background: rgba(255, 255, 255, 0.1);
+  @media (max-width: $max-width) {
+    padding: 20px 36px;
+  }
+  @media (max-width: $mobile-width) {
     padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+    border-radius: 60px;
+    color: $white;
+    background: rgba(255, 255, 255, 0.10);
+
   }
 }
 
@@ -71,16 +86,15 @@
   font-size: 24px;
   font-family: $sub-font;
   font-weight: 500;
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-width) {
     width: $w100;
     font-size: 16px;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 10px 0;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
-    width: $w100;
   }
 }
 
@@ -89,10 +103,13 @@
   font-size: 70px;
   font-weight: 800;
   text-transform: uppercase;
-  @media (max-width: 600px) {
+  box-sizing: border-box;
+  @media (max-width: 1050px) {
     width: $w100;
+    font-size: 64px;
+  }
+  @media (max-width: 600px) {
     font-size: 36px;
-    padding: 0 15px;
   }
 }
 
@@ -107,10 +124,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  @media (max-width: 1050px) {
+    width: $w100;
+    font-size: 64px;
+  }
   @media (max-width: 600px) {
-    width: $w100;
     font-size: 36px;
-    width: $w100;
   }
 }
 
@@ -120,3 +139,163 @@
     height: 20px;
   }
 }
+
+
+.homeHeroHistoryWrap {
+  background: $light;
+  width: $w100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(15% + 62px);
+  margin-top: -15%;
+
+
+  @media (max-width: 870px) {
+    padding-top: calc(16%);
+  }
+
+  .homeHeroHistory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: $max-width;
+    padding-bottom: 80px;
+
+    @media (max-width: $max-width) {
+      width: $w100;
+      padding: 0 15px 80px;
+    }
+    @media (max-width: 1050px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &StartSections {
+      display: flex;
+      gap: 30px;
+      @media (max-width: 1050px) {
+        width: $w100;
+        gap: 10%
+      }
+      @media (max-width: 870px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .homeHeroHistoryTitle {
+        font-family: $main-font;
+        @include toRem(font-size, 54);
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $black;
+        @media (max-width: 700px) {
+          @include toRem(font-size, 36);
+        }
+      }
+
+      .homeHeroHistoryInfo {
+        color: $black;
+
+        @media (max-width: $max-width) {
+          width: $w100;
+        }
+
+        &Text {
+          color: $dark;
+          font-size: 18px;
+          font-family: $sub-font;
+          font-weight: 400;
+          line-height: 29px;
+          padding-bottom: 25px;
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+
+        &Link {
+          display: flex;
+          gap: 12px;
+          color: $dark;
+          font-size: 18px;
+          font-family: $sub-font;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &Navigations {
+      display: flex;
+      gap: 50px;
+      @media (max-width: $max-width) {
+        gap: 30px;
+        justify-content: center;
+      }
+      @media (max-width: 1050px) {
+        width: $w100;
+      }
+      @media (max-width: 870px) {
+        justify-content: space-between;
+        gap: 0;
+      }
+
+
+      &Arrow {
+        background: $white;
+        width: 130px;
+        height: 130px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.10);
+        cursor: pointer;
+        @media (max-width: $max-width) {
+          width: 100px;
+          height: 100px;
+        }
+        @media (max-width: 1050px) {
+          width: 70px;
+          height: 70px;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      &BulletsWrap {
+        display: none;
+        @media (max-width: 1050px) {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+      }
+
+      &Bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(41, 54, 79, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+
+        &Active {
+          width: 16px;
+          height: 16px;
+          background: rgba(41, 54, 79, 1);
+          border-radius: 50%;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+

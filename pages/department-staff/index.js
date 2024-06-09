@@ -3,11 +3,13 @@ import {useSelector} from "react-redux";
 
 import styles from '../../src/styles/staff.module.scss'
 import StaffCard from "@/components/StaffCard/StaffCard";
+import {useMentors} from "@/hooks/useMentors";
 
 const DepartmentStaff = () => {
 
     const {staff} = useSelector(state => state['staffReducer']);
-
+    const [getMentors] = useMentors();
+    getMentors();
 
     return (
         <div className={styles.staffWrap}>

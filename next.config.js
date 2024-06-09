@@ -9,5 +9,13 @@ module.exports = withFonts({
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
         outputStyle: 'compressed'
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'exprszojjwnnpmywqhwm.supabase.co'
+            }
+        ]
     }
 });

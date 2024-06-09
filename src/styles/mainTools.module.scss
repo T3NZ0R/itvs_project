@@ -32,7 +32,7 @@
 
 .mainToolsContentWrap{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240-30px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240-30px, 1fr));
   grid-gap: clamp(30px, 30px, 30px);
   @media (max-width: 600px) {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -78,6 +78,7 @@
 
 .mainToolsItemImage{
   width: $w50;
+  height: auto;
 }
 
 .mainToolsItemTitle{

@@ -9,16 +9,16 @@ import Mail from '@/assets/icons/mail.svg';
 
 const StaffCard = ({person}) => {
 
-    const {name, degree, email, wikiLink, photo} = person;
+    const {name, degree, email, wikilink, photo} = person;
 
     return (
         <div className={styles.staffCardWrap}>
             <div>
-                <Image className={styles.staffCardImage} src={photo} alt={name} />
+                {/*<Image className={styles.staffCardImage} src={photo} alt={name} width={"100"} height={"100"} />*/}
                 <h2 className={styles.staffCardName}>
                     {name}
                 </h2>
-                <h5 className={styles.staffCardDegree}>{degree}</h5>
+                <h5 className={styles.staffCardDegree}>{degree.value}</h5>
                 <div className={styles.staffCardDivider}></div>
                 <Link className={styles.staffEmailLink} target={"_blank"} href={`mailto:${email}`} >
                     <div className={styles.staffCardEmail}>
@@ -28,7 +28,7 @@ const StaffCard = ({person}) => {
                 </Link>
             </div>
 
-            <Link className={styles.staffWikiLink} target={"_blank"} href={wikiLink}>
+            <Link className={styles.staffWikiLink} target={"_blank"} href={wikilink}>
                 <div className={styles.staffCardWiki}>
                     Переглянути wiki.lnu <Image src={Arrow} alt="mail" />
                 </div>

@@ -11,7 +11,7 @@ const WhoCanApply = () => {
                 <div className={styles.TopItem}>
                     <div className={styles.VideoContent}>
                         <iframe className={styles.Video}
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            src="https://www.youtube.com/embed/WmllAlOu4sU?autoplay=1&controls=1&mute=1&t=17">
                         </iframe>
                     </div>
                     <div className={styles.TextContent}>

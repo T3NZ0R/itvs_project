@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+.swiperHeroWrap {
+  width: $w100;
+  overflow: hidden;
+  @media(max-width: 1360px) {
+    padding: 0 7%;
+    box-sizing: border-box;
+  }
+
+  .swiperHero {
+    max-width: $max-width;
+    width: $w100;
+
+
+    .swiperHeroSlide {
+      max-width: $max-width;
+      width: $w100;
+
+      img {
+        width: $w100;
+        height: auto;
+      }
+
+    }
+
+  }
+}
