@@ -1,0 +1,146 @@
+@import 'variables';
+@import 'mixins';
+
+.Partners {
+
+  background: $light;
+  color: black;
+  padding-top: 120px;
+  width: $w100;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1030px) {
+    padding-top: 40px;
+  }
+
+  &Wrap {
+    width: $max-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @media (max-width: $max-width) {
+      padding: 0 15px 120px;
+    }
+    @media (max-width: 1030px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+      @media (max-width: 1000px) {
+        padding: 0 15px 80px;
+      }
+
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: $w30;
+    @media (max-width: 1030px) {
+      width: $w100;
+    }
+
+    &Title {
+      font: $main-font;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 800;
+      color: black;
+      @media (max-width: 1000px) {
+        font-size: 22px;
+      }
+    }
+
+    &Subtitle {
+      font: $sub-font;
+      color: rgba(41, 54, 79, 1);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28.8px;
+      @media (max-width: 1000px) {
+        font-size: 16px;
+      }
+    }
+
+    &Link {
+
+      font-weight: 700;
+      font-size: 18px;
+      display: flex;
+      justify-items: center;
+      color: rgba(41, 54, 79, 1);
+
+      &Icon {
+        margin-left: 10px;
+      }
+    }
+
+
+  }
+
+  &Logos {
+    width: calc($w70 - 120px);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    @media (max-width: 1100px) {
+      grid-gap: 15px;
+    }
+
+    @media (max-width: 1030px) {
+      width: $w100;
+    }
+    @media (max-width: 615px) {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 440px) {
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    &Item {
+      aspect-ratio: 216/170;
+      max-height: 170px;
+      max-width: 216px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 22px 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      @media (max-width: 1060px) {
+        padding: 22px 10px;
+      }
+      @media (max-width: 1030px) {
+        max-height: $w100;
+        max-width: $w100;
+      }
+
+      @media (max-width: 440px) {
+        max-height: 120px;
+        aspect-ratio: unset;
+      }
+
+      img {
+        max-height: calc(170px - 44px);
+        object-fit: contain;
+        @media (max-width: 1030px) {
+          max-height: available;
+          max-width: available;
+        }
+        @media (max-width: 440px) {
+         max-height: 90px;
+        }
+      }
+    }
+
+
+  }
+
+
+}

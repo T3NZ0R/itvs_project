@@ -18,7 +18,7 @@ const AboutUsSection = () => {
                     <div className={styles.aboutUsStaff}><Image className={styles.aboutUsStaffImg}
                                                               src={Staff} alt="" /></div>
                     <div className={styles.aboutUsTextInfo}>
-                        <h4 className={styles.aboutUsTitle}>Про нас</h4>
+                        <h1 className={styles.aboutUsTitle}>Про нас</h1>
                         <p className={styles.aboutUsText}>У 1998 році на кафедрі “Автоматизовані системи <br/>
                             управління” (АСУ) розпочато підготовку бакалаврів <br/>
                             базового напрямку „Легка промисловість”, який в <br/>

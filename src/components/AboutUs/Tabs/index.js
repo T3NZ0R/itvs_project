@@ -1,0 +1,7 @@
+export * from "./Contents/Contents"
+export * from "./History/History"
+export * from "./Education/Education"
+export * from "./Partners/Partners"
+export * from "./ResearchActivity/ResearchActivity"
+export * from "./InternationalActivity/InternationalActivity"
+export * from "./EducationLevels/EducationLevels"

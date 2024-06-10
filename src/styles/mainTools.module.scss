@@ -19,7 +19,7 @@
 }
 
 .mainToolsTitle{
-  font-family: $main-font;
+
   @include toRem(font-size, 54);
   font-weight: 800;
   text-transform: uppercase;
@@ -64,7 +64,7 @@
   grid-column: span 2;
   color: $dark;
   font-size: 35px;
-  font-family: $main-font;
+
   font-weight: 800;
   text-transform: uppercase;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.10);
@@ -82,7 +82,7 @@
 }
 
 .mainToolsItemTitle{
- font-family: $sub-font;
+
   font-weight: 800;
   font-size: 22.15px;
 }

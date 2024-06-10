@@ -62,7 +62,7 @@
 }
 
 .headerPageLink {
-  font-family: $sub-font;
+
   text-decoration: none;
   color: $white;
   @include toRem(font-size, 18);
@@ -82,7 +82,7 @@
 }
 
 .headerDropdownLink {
-  font-family: $sub-font;
+
   text-decoration: none;
   font-weight: 400;
   color: $white;
@@ -122,7 +122,7 @@
 
 .headerDropdownContentLink {
   display: block;
-  font-family: $sub-font;
+
   @include toRem(font-size, 18);
   font-weight: 400;
   text-decoration: none;
@@ -257,7 +257,7 @@
 
 .headerHamburgerMenuContentLink {
   display: block;
-  font-family: $sub-font;
+
   @include toRem(font-size, 18);
   font-weight: 400;
   text-decoration: underline;

@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins';
+
+.InternationalActivity {
+  &Wrap {
+    width: $w100;
+    display: flex;
+  }
+  &Info{
+    width: $w60;
+    @media (max-width: 1000px) {
+      width: $w100;
+    }
+  }
+  &Contents{
+    width: $w40;
+    @media (max-width: 1000px) {
+      display: none;
+      width: 0;
+    }
+  }
+}

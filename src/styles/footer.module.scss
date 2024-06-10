@@ -46,7 +46,7 @@
   }
 
   .contactsHeader {
-    font-family: $main-font;
+
     @include toRem(font-size, 54);
     font-weight: 800;
     text-transform: uppercase;
@@ -59,7 +59,7 @@
   }
 
   .contactsDepartment {
-    font-family: $sub-font;
+
     @include toRem(font-size, 18);
     font-weight: 200;
     letter-spacing: 1px;
@@ -78,7 +78,7 @@
   }
 
   .contactsEmail {
-    font-family: $main-font;
+
     @include toRem(font-size, 36);
     font-weight: 700;
     letter-spacing: 1px;
@@ -92,7 +92,7 @@
   }
 
   .contactsPhone {
-    font-family: $sub-font;
+
     @include toRem(font-size, 18);
     font-weight: 400;
     @include toRem(margin-bottom, 5);
@@ -159,7 +159,7 @@
   }
 
   .locationText {
-    font-family: $sub-font;
+
     @include toRem(font-size, 18);
     font-weight: 700;
     letter-spacing: 1px;
@@ -219,7 +219,7 @@
 
 
   .footerLink {
-    font-family: $sub-font;
+
     @include toRem(font-size, 18);
     font-weight: 700;
     letter-spacing: 0.5px;

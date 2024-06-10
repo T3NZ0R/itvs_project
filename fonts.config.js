@@ -2,8 +2,8 @@ module.exports = {
     fonts: [
         {
             family: "Kyiv Sans",
-            name: "KyivTypeSans-Regular.ttf",
-            format: "truetype",
+            name: "KyivTypeSans-Black3.otf",
+            format: "opentype",
             weight: "normal",
             style: "normal"
         },

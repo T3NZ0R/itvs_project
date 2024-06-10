@@ -21,7 +21,7 @@
 }
 
 .moreInfoTitle {
-  font-family: $main-font;
+
   @include toRem(font-size, 54);
   font-weight: 800;
   text-transform: uppercase;
@@ -85,7 +85,7 @@
 
 .moreInfoSlideTitle {
   font-size: 32px;
-  font-family: $main-font;
+
   font-weight: 800;
   text-transform: uppercase;
   line-height: 42px;
@@ -99,7 +99,7 @@
 
 .moreInfoSlideDescription {
   font-size: 18px;
-  font-family: $sub-font;
+
   font-weight: 400;
   opacity: $w80;
   line-height: 29px;

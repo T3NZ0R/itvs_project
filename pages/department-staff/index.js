@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from "react-redux";
 
 import styles from '../../src/styles/staff.module.scss'
@@ -9,7 +9,11 @@ const DepartmentStaff = () => {
 
     const {staff} = useSelector(state => state['staffReducer']);
     const [getMentors] = useMentors();
-    getMentors();
+
+    useEffect(()=>{
+        getMentors();
+    }, [])
+
 
     return (
         <div className={styles.staffWrap}>

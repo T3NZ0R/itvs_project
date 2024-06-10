@@ -1,0 +1,81 @@
+@import "variables";
+@import "mixins";
+
+.Badge {
+
+  &Wrap {
+    width: $w100;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &Header {
+    width: $w100;
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    background: $black;
+    border-radius: 40px;
+    box-sizing: border-box;
+  }
+
+  &Year {
+    padding: 6px 20px;
+    background: linear-gradient(99deg, #FF6E02 6.59%, #FEDE7D 212.47%);
+    border-radius: 45px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    color: $white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    @media (max-width: 1000px) {
+      font-size: 14px;
+    }
+  }
+
+  &Title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    color: $white;
+    @media (max-width: 1000px) {
+      font-size: 14px;
+    }
+  }
+
+  &Body {
+    width: $w100;
+  }
+
+  &Image{
+    width: $w100;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  &Paragraph {
+    color: $dark;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    @media (max-width: 1000px) {
+      font-size: 14px;
+    }
+  }
+
+  &Wrappers{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: $w100;
+  }
+
+}

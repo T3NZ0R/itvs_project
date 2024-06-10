@@ -48,7 +48,7 @@ const HomeHero = () => {
                 <div className={styles.homeHeroHistory}>
                     <div className={styles.homeHeroHistoryStartSections}>
 
-                        <h1 className={styles.homeHeroHistoryTitle}>Історія<br/>
+                        <h1 className={styles.homeHeroHistoryTitle}>Новини<br/>
                             кафедри</h1>
                         <div className={styles.homeHeroHistoryInfo}>
                             <p className={styles.homeHeroHistoryInfoText}>

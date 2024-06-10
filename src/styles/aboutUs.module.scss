@@ -1,0 +1,235 @@
+@import 'variables';
+@import 'mixins';
+
+
+.AboutUsWrap {
+  width: $w100;
+
+  .AboutUsHero {
+    width: $w100;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    &Wrap {
+      width: $max-width;
+      padding-bottom: 120px;
+      padding-top: 120px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $max-width) {
+        width: $w100;
+        padding: 50px 15px;
+      }
+      @media (max-width: 880px) {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 15px 33%;
+        gap: 20px;
+      }
+    }
+
+    &Text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &Title {
+        font-size: 70px;
+        font-weight: 800;
+        text-transform: uppercase;
+        @media (max-width: 600px) {
+          font-size: 36px;
+        }
+
+        &Colored {
+          font-family: "Accent", sans-serif;
+          font-size: 70px;
+          font-weight: 800;
+          text-transform: uppercase;
+          background-color: #f3ec78;
+          background-image: $orange-gradient;
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-text-fill-color: transparent;
+          @media (max-width: 600px) {
+            width: $w100;
+            font-size: 36px;
+          }
+        }
+      }
+
+      &Subtitle {
+        display: flex;
+        gap: 5px;
+        opacity: $w40;
+        font-size: 24px;
+
+        font-weight: 500;
+        @media (max-width: 800px) {
+          width: $w100;
+          font-size: 18px;
+        }
+      }
+
+    }
+
+    &ArrowWrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 308px;
+      height: 308px;
+      @media (max-width: 880px) {
+        width: $w100;
+      }
+    }
+
+    &Arrow {
+      display: flex;
+      width: fit-content;
+      background: #ffff;
+      border-radius: 50%;
+      padding: 30px 32px;
+      cursor: pointer;
+      @media (max-width: 600px) {
+        padding: 20px 22px;
+      }
+
+      &Border {
+        padding: 33px;
+        border: rgba(255, 255, 255, 0.3) 1px solid;
+        border-radius: 50%;
+        animation: pulse infinite 3s;
+      }
+
+
+    }
+  }
+
+  .AboutUsHeroVideo {
+    &Wrapper {
+      max-width: $max-width;
+      width: $w100;
+      display: flex;
+      gap: 30px;
+      color: #0A0511;
+      margin-top: -15%;
+      @media (max-width: 880px) {
+        flex-direction: column;
+        margin-top: -40%;
+      }
+    }
+
+    &Wrap {
+      width: $w100;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      background: $light;
+      padding-bottom: 120px;
+      @media (max-width: $max-width) {
+        width: $w100;
+        padding: 50px 15px;
+      }
+      @media (max-width: $mobile-width) {
+        display: flex;
+        padding: 50px 15px 20px;
+      }
+    }
+
+    &Content {
+      width: $w60;
+      @media (max-width: 880px) {
+        width: $w100;
+      }
+
+      &Frame {
+        width: $w100;
+        aspect-ratio: 708/386;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+      }
+
+    }
+
+    &Text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: calc($w40 - 30px);
+      @media (max-width: 880px) {
+        width: $w100;
+      }
+
+      &Item {
+        color: black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 19px 0;
+        border-top: rgba(0, 0, 0, 0.1) 1px solid;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 600px) {
+          font-size: 18px;
+        }
+
+        &Number {
+          font-weight: 700;
+        }
+
+
+      }
+    }
+
+  }
+
+}
+
+
+@keyframes pulse {
+  0% {
+    padding: 0;
+  }
+  100% {
+    padding: 33px;
+  }
+}
+
+.BorderBottom {
+  border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+
+.GoHomeButton {
+  width: $w100;
+  background: $black;
+  border-radius: 60px;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  text-decoration: none;
+
+  &Wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+      @media (max-width: 1000px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

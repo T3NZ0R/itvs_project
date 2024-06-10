@@ -1,9 +1,35 @@
 @import "variables";
 @import "mixins";
 
+@font-face {
+  font-family: 'Mariupol';
+  src: url('../../public/fonts/Mariupol-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Accent';
+  src: url('../../public/fonts/KyivTypeSans-Black-.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body, p, h3, h4, h5, h6, h2, span, div {
+  font-family: 'Mariupol', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Accent', sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  scroll-snap-stop: always;
+
 }
 
 body {
@@ -20,16 +46,19 @@ main {
   @media (max-width: 900px) {
     @include toRem(margin-top, 87);
   }
+
 }
 
-.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
-  height: 10px!important;
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  height: 10px !important;
 }
 
-.swiper-scrollbar-drag{
-  background: $black!important;
+.swiper-scrollbar-drag {
+  background: $black !important;
 }
 
-.LastItem{
+.LastItem {
   margin-top: 15px;
 }
+
+

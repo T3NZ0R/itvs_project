@@ -11,7 +11,7 @@
 }
 
 .staffTittle {
-  font-family: $main-font;
+
   @include toRem(font-size, 72);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -60,11 +60,13 @@
 
 .staffCardImage {
   width: $w100;
+  height: auto;
+  aspect-ratio: 339/285;
   @include toRem(padding-bottom, 40);
 }
 
 .staffCardName {
-  font-family: $main-font;
+
   text-transform: uppercase;
   letter-spacing: 0.5px;
   @include toRem(font-size, 28);
@@ -75,7 +77,7 @@
 }
 
 .staffCardDegree {
-  font-family: $sub-font;
+
   @include toRem(font-size, 18);
   @include toRem(line-height, 28.80);
   font-weight: 400;
@@ -95,7 +97,7 @@
   align-items: center;
   width: fit-content;
   gap: 5px;
-  font-family: $sub-font;
+
   @include toRem(font-size, 18);
   @include toRem(line-height, 28.80);
   font-weight: 400;
@@ -119,7 +121,7 @@
   align-items: center;
   width: fit-content;
   gap: 5px;
-  font-family: $sub-font;
+
   @include toRem(font-size, 18);
   @include toRem(line-height, 28.80);
   font-weight: 400;
@@ -149,7 +151,7 @@
   @include toRem(gap, 5);
   @include toRem(border-radius, 30);
   padding: 15px 0;
-  font-family: $sub-font;
+
   @include toRem(font-size, 18);
   @include toRem(line-height, 28.80);
   font-weight: 700;

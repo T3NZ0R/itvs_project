@@ -1,0 +1,32 @@
+import React from 'react';
+import styles from "@/styles/educationLevels.module.scss";
+import TabMain from "@/components/AboutUs/Tabs/TabMain/TabMain";
+import GoHomeButton from "@/components/AboutUs/Tabs/GoHomeButton/GoHomeButton";
+import {educationLevels} from "@/components/AboutUs/Tabs/EducationLevels/educationLevels.data";
+import Card from "@/components/AboutUs/Tabs/Card/Card";
+
+export const EducationLevels = () => {
+    return (
+        <div className={styles.EducationLevelsWrap}>
+            <div className={styles.EducationLevelsInfo}>
+                <TabMain
+                    info={
+                        <><b>Бакалаврська та магістерська</b> програми на кафедрі «Інформаційні технології видавничої
+                            справи»
+                            (ІТВС) пропонують студентам широкий спектр знань і навичок, необхідних для успішної кар'єри
+                            у видавничо-поліграфічній галузі та комп'ютерному дизайні. <br/>
+                            <br/>
+                            Бакалаврат зосереджений на практичних навичках, креативному мисленні, бізнесі та управлінні,
+                            мультимедійних технологіях і дизайні, тоді як магістратура поглиблює знання у теоретичних
+                            аспектах, аналітиці, інтеграції знань і сучасних IT-технологіях, готуючи студентів до
+                            викликів сучасного ринку праці.
+                        </>}
+                    title={"Рівні навчання на кафедрі ІТВС"}
+                />
+                {educationLevels.map((item, index) => <Card key={index} title={item.title} info={item.info}/>)}
+                <GoHomeButton/>
+            </div>
+            <div className={styles.EducationLevelsContents}></div>
+        </div>
+    );
+};

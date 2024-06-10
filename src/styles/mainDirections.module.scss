@@ -22,7 +22,7 @@
 }
 
 .mainDirectionsTitle {
-  font-family: $main-font;
+
   @include toRem(font-size, 54);
   font-weight: 800;
   text-transform: uppercase;
@@ -85,7 +85,7 @@
   color: $black;
   left: 20px;
   padding: 12px 30px;
-  font-family: $sub-font;
+
   font-size: 18px;
   font-weight: 700;
   @media (max-width: 700px) {
