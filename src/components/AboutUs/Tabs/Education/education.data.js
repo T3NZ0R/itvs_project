@@ -1,6 +1,6 @@
 import programming from "src/assets/img/programming.png"
 import UIUX from "src/assets/img/UIUX.png"
-import WebDesign from "src/assets/img/WebDesign.png"
+import WebDesign from "@/assets/img/WebDesign.png"
 
 
 export const educationData = [
