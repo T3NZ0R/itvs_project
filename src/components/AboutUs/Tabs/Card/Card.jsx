@@ -7,7 +7,7 @@ const Card = ({img, info, title, buttonLink}) => {
     return (
         <div className={styles.Card}>
             {img && <Image className={styles.CardImage} src={img} alt={title}/>}
-            <h2 className={styles.CardTitle}>{title}</h2>
+            <h3 className={styles.CardTitle}>{title}</h3>
             <p className={styles.CardInfo}>{info}</p>
             {buttonLink &&
                 <a className={styles.CardButton} href={buttonLink} target="_blank">

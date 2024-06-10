@@ -23,9 +23,9 @@ export const researchActivityData = [
                             <Image src={DocHub} alt={"DocHub"}/>
                         </div>
                         <p className={styles.CardItemsElementText}>
-                            <b>DocHub:</b> "Structuring
+                            <b>DocHub:</b> &quot;Structuring
                             Cooperation in Doctoral Research, Transferrable Skills Training, and
-                            Academic Writing instruction in Ukraine's regions" (номер проекту: 8
+                            Academic Writing instruction in Ukraine&apos;s regions&quot; (номер проекту: 8
                             574064-EPP-1-2016-1-LT-EPPKA2-CBHE-SP)</p>
                     </div>
                     <div className={styles.CardItemsElement}>
@@ -33,7 +33,7 @@ export const researchActivityData = [
                             <Image src={Mastis} alt={"Mastis"}/>
                         </div>
                         <p className={styles.CardItemsElementText1}>
-                            <b>MASTIS:</b> "Establishing Modern Master-level Studies in Information Systems" (номер
+                            <b>MASTIS:</b> &quot;Establishing Modern Master-level Studies in Information Systems&quot; (номер
                             проекту:
                             561592-EPP-1-2015-1-FR-EPPKA2-CBHE-JP)
                         </p>
@@ -90,25 +90,25 @@ export const researchActivityData = [
                     <br/>
                     <ul style={{paddingTop: "10px", paddingLeft: "15px"}}>
                         <li>
-                            <b>2021-2022:</b> "Гібридні неітеративні системи обчислювального інтелекту для задач
+                            <b>2021-2022:</b> &quot;Гібридні неітеративні системи обчислювального інтелекту для задач
                             електронної
-                            комерції"
+                            комерції&quot;
                         </li>
                         <li>
-                            <b>2019:</b> Прикладна НДР "Нейромережева технологія захисту та передачі даних у реальному
+                            <b>2019:</b> Прикладна НДР &quot;Нейромережева технологія захисту та передачі даних у реальному
                             часі з
-                            використанням шумоподібних кодів"
+                            використанням шумоподібних кодів&quot;
                         </li>
                         <li>
-                            <b>2018:</b> Прикладна НДР "Інтелектуальні інформаційні технології багаторівневоного
+                            <b>2018:</b> Прикладна НДР &quot;Інтелектуальні інформаційні технології багаторівневоного
                             управління
-                            енергоефективністю регіону"
+                            енергоефективністю регіону&quot;
                         </li>
                         <li>
-                            <b>2016-2020 рр.:</b> міжнародний освітній проєкт за програмою Erasmus+ "DocHub".
+                            <b>2016-2020 рр.:</b> міжнародний освітній проєкт за програмою Erasmus+ &quot;DocHub&quot;.
                         </li>
                         <li>
-                            <b>2016-2019 рр.:</b> міжнародний освітній проєкт за програмою Erasmus+ "MASTIS".
+                            <b>2016-2019 рр.:</b> міжнародний освітній проєкт за програмою Erasmus+ &quot;MASTIS&quot;.
                         </li>
                     </ul>
                     <br/>

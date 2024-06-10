@@ -1,18 +1,18 @@
 import styles from "@/styles/educationLevels.module.scss";
-import {Fragment} from "react";
+import React from "react";
 import Badge from "@/components/AboutUs/Tabs/Badge/Badge";
 
 
 const items1 = [
-    <div className={styles.EducationLevelsItem}>
+    <div key={0} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Практичні навички та креативність</h3>
         <p className={styles.EducationLevelsItemInfo}>
-            Студенти навчаються використовувати різні програми та інструменти для розв'язання реальних проблем у сфері
+            Студенти навчаються використовувати різні програми та інструменти для розв&apos;язання реальних проблем у сфері
             видавництва та поліграфії. Важливий акцент робиться на креативному мисленні при вирішенні проблемних
             ситуацій під час створення дизайнерської продукції.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={1} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Бізнес і управління</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Програма також включає навчання <b>основам бізнесу</b> в області комп’ютерного дизайну та управління
@@ -20,7 +20,7 @@ const items1 = [
             організовувати та документально оформлювати процеси</b> підприємницької діяльності.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={2} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Системний підхід і економічна ефективність</h3>
         <p className={styles.EducationLevelsItemInfo}>
             На кафедрі навчають студентів використовувати системний підхід при управлінні створенням електронних видань.
@@ -29,7 +29,7 @@ const items1 = [
             електронних та друкованих видань.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={3} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Мультимедійні технології</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Студенти вчаться створювати електронні мультимедійні видання, використовуючи різноманітні програми та
@@ -38,7 +38,7 @@ const items1 = [
             поліпшення якості зображень та підготовки їх для публікації в Інтернеті.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={4} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Дизайн та верстка</h3>
         <p className={styles.EducationLevelsItemInfo}>
             На кафедрі студенти вивчають, як створювати ефективні колірні рішення і створювати гармонійні комбінації
@@ -47,7 +47,7 @@ const items1 = [
             анімацію. Крім того, студенти вивчають створення рекламних продуктів з тривимірного моделювання.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={5} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Технологічні процеси і безпека</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Програма включає підготовку фахівців з керування технологічними процесами видавничо-поліграфічної справи,
@@ -55,7 +55,7 @@ const items1 = [
             створення ресурсів для Інтернету та забезпечення захисту інформації в мультимедійних видавництвах.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={6} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Художня композиція та шрифти</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Кафедра навчає основам художньої композиції та графічного дизайну при розробці мультимедійних та друкованих
@@ -69,16 +69,16 @@ const items1 = [
 ];
 
 const items2 = [
-    <div className={styles.EducationLevelsItem}>
+    <div key={0} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Теоретичні знання та аналітичні навички</h3>
         <p className={styles.EducationLevelsItemInfo}>
-            Магістранти здобувають здатність використовувати теоретичні та фундаментальні знання в галузі комп’ютерного
+            Магістранти здобувають здатність використовувати теоретичні та фундаментальні знання в галузі комп&apos;ютерного
             дизайну. Вони вчаться формулювати, аналізувати та синтезувати рішення наукових проблем, розділяючи їх на
-            складові частини для детальнішого дослідження та розв'язання.
+            складові частини для детальнішого дослідження та розв&apos;язання.
 
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={1} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Інтеграція знань і креативність</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Програма підкреслює важливість інтеграції знань та навичок з різних дисциплін для вирішення технічних та
@@ -86,7 +86,7 @@ const items2 = [
             ситуацій.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={2} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Мобільні додатки та IT-продукти</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Студенти набувають знання та навички проектування додатків для мобільних пристроїв і формування
@@ -94,14 +94,14 @@ const items2 = [
             здатність проектувати користувальницькі інтерфейси та створювати візуальне оформлення електронних
             видань. </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={3} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Візуалізація та обробка зображень</h3>
         <p className={styles.EducationLevelsItemInfo}>
-            Програма забезпечує знання в галузі візуалізації даних і 3D-об'єктів, розробки математичних методів та
-            алгоритмів обробки зображень у цифровому форматі. Студенти вчаться впроваджувати сучасні комп'ютерні системи
+            Програма забезпечує знання в галузі візуалізації даних і 3D-об&apos;єктів, розробки математичних методів та
+            алгоритмів обробки зображень у цифровому форматі. Студенти вчаться впроваджувати сучасні комп&apos;ютерні системи
             у видавничо-поліграфічний процес. </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={4} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Менеджмент та організація</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Магістранти здобувають здатність організовувати процес навчання співробітників та самонавчання на робочому
@@ -109,7 +109,7 @@ const items2 = [
             видавництв електронної та поліграфічної продукції.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={5} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Аналіз і нові технології</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Студенти вчаться аналізувати і формувати нові способи, форми та правові аспекти вираження і пізнання людини
@@ -117,7 +117,7 @@ const items2 = [
             методологій проектування комп’ютерних технологій та інформаційних видавничих систем.
         </p>
     </div>,
-    <div className={styles.EducationLevelsItem}>
+    <div key={6} className={styles.EducationLevelsItem}>
         <h3 className={styles.EducationLevelsItemTitle}>Інновації та економіка</h3>
         <p className={styles.EducationLevelsItemInfo}>
             Студенти вчаться аналізувати і формувати нові способи, форми та правові аспекти вираження і пізнання людини
@@ -141,10 +141,10 @@ export const educationLevels = [
                         <p className={styles.EducationLevelsItemInfo}>Бакалаврська програма на кафедрі «Інформаційні
                             технології видавничої справи» (ІТВС) надає
                             студентам
-                            широкий спектр знань та навичок, необхідних для успішної кар'єри у видавничо-поліграфічній
+                            широкий спектр знань та навичок, необхідних для успішної кар&apos;єри у видавничо-поліграфічній
                             галузі та
-                            комп'ютерному дизайні.</p>
-                        {items1.map((item, index) => <Fragment key={index}>{item}</Fragment>)}
+                            комп&apos;ютерному дизайні.</p>
+                        {items1.map((item) => item)}
                     </div>
                 }
                        title={"Бакалаврат"}
@@ -163,9 +163,9 @@ export const educationLevels = [
                         <p className={styles.EducationLevelsItemInfo}>
                             Програма магістратури на кафедрі «Інформаційні
                             технології видавничої справи» (ІТВС) забезпечує студентів необхідними знаннями та навичками
-                            для досягнення високого рівня професійної компетентності у сфері комп'ютерного дизайну та
+                            для досягнення високого рівня професійної компетентності у сфері комп&apos;ютерного дизайну та
                             видавничо-поліграфічної діяльності.</p>
-                        {items2.map((item, index) => <Fragment key={index}>{item}</Fragment>)}
+                        {items2.map((item) => item)}
                     </div>
                 }
                        title={"Магістратура"}
