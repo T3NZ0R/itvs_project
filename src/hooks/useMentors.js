@@ -14,7 +14,7 @@ export const useMentors = () => {
             .order("degree_id", {ascending: true});
         dispatch(getStaff({mentors, error}));
 
-    }, []);
+    }, [dispatch]);
 
     return useMemo(() => [getMentors], [getMentors]);
 };

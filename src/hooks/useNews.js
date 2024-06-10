@@ -12,7 +12,7 @@ export const useNews = () => {
             .select('*, section(id, value)')
             .order("degree_id", {ascending: true});
         dispatch(getNews({ news, error }))
-    }, []);
+    }, [dispatch]);
 
     return useMemo(() => [getNewsRequest], [getNewsRequest]);
 };

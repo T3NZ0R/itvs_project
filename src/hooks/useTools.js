@@ -10,7 +10,7 @@ export const useTools = () => {
             .from('programs')
             .select('*')
         dispatch(getTools({tools, error}));
-    }, []);
+    }, [dispatch]);
 
     return useMemo(() => [getToolsRequest], [getToolsRequest]);
 };
