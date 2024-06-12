@@ -23,8 +23,8 @@
   width: $w100;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  @media (max-width: 1210px) {
+  flex-wrap: nowrap;
+  @media (max-width: 1200px) {
     flex-direction: column;
     @include toRem(gap, 20);
   }
@@ -41,9 +41,9 @@
     width: $w100;
   }
 
-  @media (max-width: 1210px) {
-    width: $w100;
-  }
+  //@media (max-width: 1210px) {
+  //  width: $w100;
+  //}
 
   .contactsHeader {
 
@@ -141,21 +141,25 @@
 }
 
 .footerLocation {
-  width: $w60;
+  width: calc($w60 - 20px);
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   @include toRem(gap, 20);
 
   @media (max-width: 600px) {
-    @include toRem(margin-top, 80);
+    @include toRem(margin-top, 20);
     width: $w100;
   }
-  @media (max-width: 1210px) {
+  @media (max-width: 1200px) {
     width: $w100;
   }
 
   .locationMap {
     width: $w100 !important;
+    aspect-ratio: 2/1;
+    border: none;
+    border-radius: 20px;
   }
 
   .locationText {
@@ -170,16 +174,23 @@
     line-height: 28px;
     @include toRem(gap, 5);
 
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
       white-space: normal;
       @include toRem(font-size, 14);
       line-height: 20px;
     }
 
-    .locationTextLink{
+    .locationTextLink {
       color: $white;
       text-decoration: none;
-      &:hover{
+
+      @media (max-width: 600px) {
+        white-space: normal;
+        @include toRem(font-size, 14);
+        line-height: 20px;
+      }
+
+      &:hover {
         text-decoration: underline;
       }
     }

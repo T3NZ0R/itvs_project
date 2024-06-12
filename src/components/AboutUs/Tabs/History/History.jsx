@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from "@/styles/history.module.scss";
 import TabMain from "@/components/AboutUs/Tabs/TabMain/TabMain";
-import GoHomeButton from "@/components/AboutUs/Tabs/GoHomeButton/GoHomeButton";
+import LinkButton from "@/components/LinkButton/LinkButton";
 import Card from "@/components/AboutUs/Tabs/Card/Card";
 import {historyData} from "@/components/AboutUs/Tabs/History/history.data";
+import {Contents} from "@/components/AboutUs/Tabs";
 
 export const History = () => {
     return (
@@ -23,9 +24,11 @@ export const History = () => {
                 />
                 {historyData.map((item, index) => <Card key={index} title={item.title}
                                                         info={item.info}/>)}
-                <GoHomeButton/>
+                <LinkButton title={"Перейти на головну"} link={"/"}/>
             </div>
-            <div className={styles.HistoryContents}></div>
+            <div className={styles.HistoryContents}>
+                <Contents items={historyData}/>
+            </div>
         </div>
     );
 };

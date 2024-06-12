@@ -32,7 +32,7 @@ const Hero = () => {
                 <div className={styles.AboutUsHeroVideoWrapper}>
                     <div className={styles.AboutUsHeroVideoContent}>
                         <iframe className={styles.AboutUsHeroVideoContentFrame}
-                                src="https://www.youtube.com/embed/WmllAlOu4sU?autoplay=1&controls=1&mute=1&t=17">
+                                src="https://www.youtube.com/embed/WmllAlOu4sU?controls=1">
                         </iframe>
                     </div>
 

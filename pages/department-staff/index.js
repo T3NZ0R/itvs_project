@@ -12,7 +12,7 @@ const DepartmentStaff = () => {
 
     useEffect(()=>{
         getMentors();
-    }, [])
+    }, [getMentors])
 
 
     return (

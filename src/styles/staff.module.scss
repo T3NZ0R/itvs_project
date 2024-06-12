@@ -60,9 +60,20 @@
 
 .staffCardImage {
   width: $w100;
-  height: auto;
+  max-height: 285px;
   aspect-ratio: 339/285;
-  @include toRem(padding-bottom, 40);
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  @include toRem(margin-bottom, 40);
+
+  &Item{
+    width: $w100;
+    height: $w100;
+    object-fit: cover;
+  }
+
+
 }
 
 .staffCardName {

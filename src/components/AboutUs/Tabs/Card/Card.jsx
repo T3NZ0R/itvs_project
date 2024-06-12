@@ -6,7 +6,7 @@ import arrow from "@/assets/icons/arrowBlack.svg";
 const Card = ({img, info, title, buttonLink}) => {
     return (
         <div className={styles.Card}>
-            {img && <Image className={styles.CardImage} src={img} alt={title}/>}
+            {img && <Image className={styles.CardImage} src={img} alt={title} width={"1000"} height={"1000"}/>}
             <h3 className={styles.CardTitle}>{title}</h3>
             <p className={styles.CardInfo}>{info}</p>
             {buttonLink &&

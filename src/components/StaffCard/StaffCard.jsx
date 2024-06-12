@@ -14,7 +14,9 @@ const StaffCard = ({person}) => {
     return (
         <div className={styles.staffCardWrap}>
             <div>
-                <Image className={styles.staffCardImage} src={photo} alt={name} width={"1000"} height={"1000"} />
+                <div className={styles.staffCardImage}>
+                    <Image className={styles.staffCardImageItem}  src={photo} alt={name} width={"1000"} height={"1000"} />
+                </div>
                 <h2 className={styles.staffCardName}>
                     {name}
                 </h2>

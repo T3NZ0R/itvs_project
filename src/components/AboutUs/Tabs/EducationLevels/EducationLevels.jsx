@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from "@/styles/educationLevels.module.scss";
 import TabMain from "@/components/AboutUs/Tabs/TabMain/TabMain";
-import GoHomeButton from "@/components/AboutUs/Tabs/GoHomeButton/GoHomeButton";
+import LinkButton from "@/components/LinkButton/LinkButton";
 import {educationLevels} from "@/components/AboutUs/Tabs/EducationLevels/educationLevels.data";
 import Card from "@/components/AboutUs/Tabs/Card/Card";
+import {Contents} from "@/components/AboutUs/Tabs";
 
 export const EducationLevels = () => {
     return (
@@ -24,9 +25,11 @@ export const EducationLevels = () => {
                     title={"Рівні навчання на кафедрі ІТВС"}
                 />
                 {educationLevels.map((item, index) => <Card key={index} title={item.title} info={item.info}/>)}
-                <GoHomeButton/>
+                <LinkButton title={"Перейти на головну"} link={"/"}/>
             </div>
-            <div className={styles.EducationLevelsContents}></div>
+            <div className={styles.EducationLevelsContents}>
+                <Contents items={educationLevels}/>
+            </div>
         </div>
     );
 };

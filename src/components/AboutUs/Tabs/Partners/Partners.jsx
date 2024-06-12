@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from "@/styles/partnersTab.module.scss";
 import TabMain from "@/components/AboutUs/Tabs/TabMain/TabMain";
-import GoHomeButton from "@/components/AboutUs/Tabs/GoHomeButton/GoHomeButton";
+import LinkButton from "@/components/LinkButton/LinkButton";
 import Image from "next/image";
 import {PartnersLogos} from "@/components/AboutUs/Partners/Partners";
 import {partnersData} from "@/components/AboutUs/Tabs/Partners/partners.data";
 import Card from "@/components/AboutUs/Tabs/Card/Card";
+import {Contents} from "@/components/AboutUs/Tabs";
 
 export const Partners = () => {
     return (
@@ -30,9 +31,11 @@ export const Partners = () => {
                     }
                 />
                 {partnersData.map((item, index)=> <Card key={index} title={item.title} info={item.info} img={item.img} buttonLink={item.buttonLink}/>)}
-                <GoHomeButton/>
+                <LinkButton title={"Перейти на головну"} link={"/"}/>
             </div>
-            <div className={styles.PartnersContents}></div>
+            <div className={styles.PartnersContents}>
+                <Contents items={partnersData}/>
+            </div>
         </div>
     );
 };

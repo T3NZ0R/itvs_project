@@ -3,8 +3,9 @@ import styles from "@/styles/internationalActivity.module.scss";
 import TabMain from "@/components/AboutUs/Tabs/TabMain/TabMain";
 import Card from "@/components/AboutUs/Tabs/Card/Card";
 
-import GoHomeButton from "@/components/AboutUs/Tabs/GoHomeButton/GoHomeButton";
+import LinkButton from "@/components/LinkButton/LinkButton";
 import {internationalActivityData} from "@/components/AboutUs/Tabs/InternationalActivity/internationalActivity.data";
+import {Contents} from "@/components/AboutUs/Tabs";
 
 export const InternationalActivity = () => {
     return (
@@ -26,9 +27,11 @@ export const InternationalActivity = () => {
                     internationalActivityData.map((item, index) => <Card key={index} title={item.title}
                                                                          info={item.info} img={item.img}/>)
                 }
-                <GoHomeButton/>
+                <LinkButton title={"Перейти на головну"} link={"/"}/>
             </div>
-            <div className={styles.InternationalActivityContents}></div>
+            <div className={styles.InternationalActivityContents}>
+                <Contents items={internationalActivityData}/>
+            </div>
         </div>
     );
 };

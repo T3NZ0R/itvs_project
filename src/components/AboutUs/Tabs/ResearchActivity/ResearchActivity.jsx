@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from "@/styles/researchActivity.module.scss";
 import TabMain from "@/components/AboutUs/Tabs/TabMain/TabMain";
-import GoHomeButton from "@/components/AboutUs/Tabs/GoHomeButton/GoHomeButton";
+import LinkButton from "@/components/LinkButton/LinkButton";
 import Card from "@/components/AboutUs/Tabs/Card/Card";
 import {researchActivityData} from "@/components/AboutUs/Tabs/ResearchActivity/researchActivity.data";
+import {Contents} from "@/components/AboutUs/Tabs";
 
 export const ResearchActivity = () => {
     return (
@@ -22,9 +23,11 @@ export const ResearchActivity = () => {
                     researchActivityData.map((item, index) => <Card key={index} title={item.title}
                                                                          info={item.info} img={item.img}/>)
                 }
-                <GoHomeButton/>
+                <LinkButton title={"Перейти на головну"} link={"/"}/>
             </div>
-            <div className={styles.ResearchActivityContents}></div>
+            <div className={styles.ResearchActivityContents}>
+                <Contents items={researchActivityData}/>
+            </div>
         </div>
     );
 };

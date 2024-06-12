@@ -14,12 +14,7 @@ const MainTools = () => {
         if (!tools.length) {
             getToolsRequest();
         }
-    }, [tools.length])
-
-
-    useEffect(() => {
-        console.log(tools);
-    }, [tools])
+    }, [tools.length, getToolsRequest])
 
     const [responseTools, setResponseTools] = useState(tools);
     const [toolsNumber, setToolsNumber] = useState(14);
@@ -44,7 +39,7 @@ const MainTools = () => {
             window.removeEventListener('resize', setDimension);
         })
 
-    }, [screenSize, tools.length]);
+    }, [screenSize, tools.length, tools]);
 
 
     return (

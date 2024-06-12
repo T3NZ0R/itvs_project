@@ -1,0 +1,38 @@
+@import "variables";
+@import "mixins";
+
+.Contents {
+  padding: 30px;
+  border-radius: 20px;
+  background: #E8E8FF;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 130px;
+
+  &Title {
+    color: #29364F;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 41.6px */
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+
+  &Wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &Item {
+    color: #29364F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 10px 0;
+    border-top: rgba(0, 0, 0, 0.1) solid 1px;
+  }
+}
