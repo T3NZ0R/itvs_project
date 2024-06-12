@@ -50,13 +50,13 @@ const Footer = () => {
                 </div>
                 <div className={styles.footerDivider}></div>
                 <div className={styles.footerLinksWrapper}>
-                    <a className={styles.footerLink} href="#">
+                    <a className={styles.footerLink} href="https://www.instagram.com/yurii_oleskiv/">
                         <div className={styles.footerLinkTitle}>Дизайн сайту:
                             <div className={styles.footerLinkInfo}>
                                 <Image src={Instagram} alt="instagram"/> @yurii_oleskiv
                             </div></div>
                     </a>
-                    <a className={styles.footerLink} target={"_blank"} href="https://linktr.ee/t3nz0r">
+                    <a className={styles.footerLink} target={"_blank"} href="https://www.instagram.com/t3nz0r/">
                         <div className={styles.footerLinkTitle}>Розробка сайту:
                             <div className={styles.footerLinkInfo}>
                                 <Image src={Instagram} alt="instagram"/> @t3nz0r
