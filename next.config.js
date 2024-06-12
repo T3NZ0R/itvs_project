@@ -11,7 +11,6 @@ module.exports = withFonts({
         outputStyle: 'compressed'
     },
     images: {
-        minimumCacheTTL: 30,
         remotePatterns: [
             {
                 protocol: 'https',
