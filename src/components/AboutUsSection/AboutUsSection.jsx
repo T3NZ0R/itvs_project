@@ -25,7 +25,7 @@ const AboutUsSection = () => {
                             2001 р. був перейменований на „Видавничо- <br/>
                             поліграфічну справу”...
                         </p>
-                        <Link href={"#"} className={styles.aboutUsLink}><p>Читати далі</p> <Image
+                        <Link href={"/about-us?tab=education"} className={styles.aboutUsLink}><p>Читати далі</p> <Image
                             src={Arrow} alt="" /></Link>
                     </div>
                 </div>

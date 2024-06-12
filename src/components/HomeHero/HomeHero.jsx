@@ -52,13 +52,11 @@ const HomeHero = () => {
                             кафедри</h1>
                         <div className={styles.homeHeroHistoryInfo}>
                             <p className={styles.homeHeroHistoryInfoText}>
-                                У 1998 році на кафедрі “Автоматизовані системи <br/>
-                                управління” (АСУ) розпочато підготовку бакалаврів<br/>
-                                базового напрямку „Легка промисловість”, який<br/>
-                                в 2001 р. був перейменований на „Видавничо-<br/>
-                                поліграфічну справу”...
+                                Ми живемо в епоху, коли інформаційні технології перетворюють усі аспекти нашого життя,
+                                включаючи видавничу справу. У цьому незаперечно велику роль відіграє Кафедра
+                                Інформаційних Технологій Видавничої Справи...
                             </p>
-                            <Link href={"#"} className={styles.homeHeroHistoryInfoLink}><p>Читати далі</p> <Image
+                            <Link href={"/events-and-news"} className={styles.homeHeroHistoryInfoLink}><p>Читати далі</p> <Image
                                 src={Arrow} alt=""/></Link>
                         </div>
                     </div>
@@ -77,7 +75,7 @@ const HomeHero = () => {
                              onClick={() => {
                                  if (active !== 7) {
                                      setActive(prev => prev + 1)
-                                 }else {
+                                 } else {
                                      setActive(1)
                                  }
                              }}>

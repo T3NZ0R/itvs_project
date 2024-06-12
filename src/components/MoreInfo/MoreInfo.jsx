@@ -16,6 +16,7 @@ import Img2 from "@/assets/img/moreInfo/Rectangle 364 (1).jpg";
 import Img3 from "@/assets/img/moreInfo/Rectangle 364 (2).jpg";
 import Img4 from "@/assets/img/moreInfo/Rectangle 364 (3).jpg";
 import Img5 from "@/assets/img/moreInfo/Rectangle 364 (4).jpg";
+import Link from "next/link";
 
 const MoreInfo = () => {
 
@@ -65,10 +66,10 @@ const MoreInfo = () => {
                     <SwiperSlide className={styles.moreInfoSlideWrap}>
                         <div className={styles.moreInfoSlide}>
                             <Image className={styles.moreInfoSlideImage} src={Img1} alt="" />
-                            <div className={styles.moreInfoSliderArrowIconWrap}>
+                            <Link href={"/about-us?tab=education"} className={styles.moreInfoSliderArrowIconWrap}>
                                 <Image
                                     className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" />
-                            </div>
+                            </Link>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Навчальний <br/>
@@ -85,8 +86,8 @@ const MoreInfo = () => {
                         <div className={styles.moreInfoSlide}>
                             <Image className={styles.moreInfoSlideImage} src={Img2}
                                    alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
-                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
+                            <Link href={"/about-us?tab=education"} className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></Link>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Компанії <br/> Партнери кафедри
@@ -102,8 +103,8 @@ const MoreInfo = () => {
                         <div className={styles.moreInfoSlide}>
                             <Image className={styles.moreInfoSlideImage} src={Img3}
                                    alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
-                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
+                            <Link href={"/about-us?tab=education"} className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></Link>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Студентська <br/>
@@ -120,8 +121,8 @@ const MoreInfo = () => {
                         <div className={styles.moreInfoSlide}>
                             <Image className={styles.moreInfoSlideImage} src={Img4}
                                    alt="" />
-                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
-                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
+                            <Link href={"/about-us?tab=education"} className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></Link>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Міжнародна <br/> діяльність
@@ -137,8 +138,8 @@ const MoreInfo = () => {
                         <div className={styles.moreInfoSlide}>
                             <Image className={styles.moreInfoSlideImage} src={Img5}
                                    alt=""/>
-                            <div className={styles.moreInfoSliderArrowIconWrap}><Image
-                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></div>
+                            <Link href={"/about-us?tab=education"} className={styles.moreInfoSliderArrowIconWrap}><Image
+                                className={styles.moreInfoSliderArrowIcon} src={Arrow} alt="arrow" /></Link>
                             <div className={styles.moreInfoSlideTextInfo}>
                                 <div className={styles.moreInfoSlideTitle}>
                                     Наукова <br/> діяльність

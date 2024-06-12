@@ -9,11 +9,15 @@ import Google from '@/assets/icons/google.svg';
 import Facebook from '@/assets/icons/facebook.svg';
 import Location from '@/assets/icons/location.svg';
 import Image from "next/image";
+import { useRouter } from 'next/router'
+
 
 const Footer = () => {
 
+    const router = useRouter()
+
     return (
-        <footer className={styles.footerBackground}>
+        <footer className={`${styles.footerBackground} ${router.pathname === "/contact-us" && styles.footerHeight}`}>
             <div className={styles.footerWrapper}>
                 <div className={styles.footerTopWrapper}>
                     <div className={styles.footerContacts}>

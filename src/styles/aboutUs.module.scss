@@ -104,6 +104,9 @@
         border: rgba(255, 255, 255, 0.3) 1px solid;
         border-radius: 50%;
         animation: pulse infinite 3s;
+        @media (max-width: 600px) {
+          animation: none;
+        }
       }
 
 
