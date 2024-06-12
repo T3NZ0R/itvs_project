@@ -13,10 +13,11 @@ const AboutUsSection = () => {
             <div className={styles.aboutUsWrap}>
                 <div className={styles.aboutUsInfo}>
                     <div className={styles.aboutUsLogo}>
-                        <Image src={Logo} alt="logo" />
+                        <Image src={Logo} alt="logo"/>
                     </div>
-                    <div className={styles.aboutUsStaff}><Image className={styles.aboutUsStaffImg}
-                                                              src={Staff} alt="" /></div>
+                    <div className={styles.aboutUsStaff}>
+                        <Image className={styles.aboutUsStaffImg}
+                               src={Staff} alt=""/></div>
                     <div className={styles.aboutUsTextInfo}>
                         <h1 className={styles.aboutUsTitle}>Про нас</h1>
                         <p className={styles.aboutUsText}>У 1998 році на кафедрі “Автоматизовані системи <br/>
@@ -26,7 +27,7 @@ const AboutUsSection = () => {
                             поліграфічну справу”...
                         </p>
                         <Link href={"/about-us?tab=education"} className={styles.aboutUsLink}><p>Читати далі</p> <Image
-                            src={Arrow} alt="" /></Link>
+                            src={Arrow} alt=""/></Link>
                     </div>
                 </div>
             </div>

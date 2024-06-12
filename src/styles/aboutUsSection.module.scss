@@ -64,10 +64,10 @@
 .aboutUsStaffImg {
   width: $w100;
   height: auto;
+  object-fit: cover;
   border-radius: 12px;
   @media (min-width: $max-width) {
     max-height: 270px;
-    width: auto;
   }
 
 }
