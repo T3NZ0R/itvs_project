@@ -14,7 +14,7 @@ module.exports = withFonts({
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'exprszojjwnnpmywqhwm.supabase.co'
+                hostname: 'uglylshxuorxjaemvxvc.supabase.co'
             }
         ]
     }
